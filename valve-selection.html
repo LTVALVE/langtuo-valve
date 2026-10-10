@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阀门选型须知 | 深圳市朗拓阀门有限公司</title>
+<meta name="description" content="阀门选型须知 | 深圳市朗拓阀门有限公司 | Shenzhen Langtuo Valve Co., Ltd">
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#c8d1e0;background:#ffffff;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ===== CSS Variables ===== */
+:root{
+  --bg-primary:#ffffff;
+  --bg-secondary:#f4f7fb;
+  --bg-card:#ffffff;
+  --bg-card-hover:#eef3f9;
+  --border:#dbe4f0;
+  --text-primary:#1f2a3d;
+  --text-secondary:#5b6b82;
+  --text-muted:#8494ab;
+  --accent:#1e6fd9;
+  --accent-glow:rgba(0,168,232,.15);
+  --accent-2:#0d4f96;
+  --success:#2ecc71;
+  --warn:#f39c12;
+  --danger:#e74c3c;
+  --radius:8px;
+  --radius-lg:16px;
+  --shadow:0 4px 24px rgba(0,0,0,.4);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.5);
+  --transition:all .3s ease;
+  --max-width:1200px;
+}
+
+/* ===== Layout ===== */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section-title{font-size:2rem;font-weight:700;color:var(--text-primary);margin-bottom:12px;letter-spacing:-.02em}
+.section-subtitle{font-size:1.05rem;color:var(--text-secondary);margin-bottom:48px;max-width:640px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header .section-subtitle{margin:12px auto 0}
+.divider{width:48px;height:3px;background:var(--accent);border-radius:2px;margin:16px auto 0}
+
+/* ===== Header ===== */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(10,15,26,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:var(--transition);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;max-width:var(--max-width);margin:0 auto;padding:0 24px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:700;color:var(--text-primary);white-space:nowrap}
+.logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{font-size:.9rem;color:var(--text-secondary);transition:var(--transition);font-weight:500}
+.nav a:hover{color:var(--accent)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.lang-toggle{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:20px;padding:4px;cursor:pointer;
+  transition:var(--transition);
+}
+.lang-btn{
+  background:none;border:none;cursor:pointer;
+  padding:6px 14px;font-size:.82rem;font-weight:600;
+  color:var(--text-muted);border-radius:16px;
+  transition:var(--transition);
+}
+.lang-btn.active{background:var(--accent);color:#fff}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:var(--transition)}
+
+/* ===== Page Hero ===== */
+.page-hero{background:linear-gradient(135deg,#f4f7fb 0%,#eef3f9 100%);border-bottom:1px solid var(--border);padding:140px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(0,168,232,.12),transparent 70%)}
+.page-hero .crumbs{font-size:.85rem;color:var(--text-muted);margin-bottom:16px}
+.page-hero .crumbs a{color:var(--accent);text-decoration:none}
+.page-hero .crumbs a:hover{text-decoration:underline}
+.page-hero h1{font-size:2.2rem;color:var(--text-primary);margin-bottom:12px;font-weight:700}
+.page-hero p{color:var(--text-secondary);font-size:1rem;max-width:680px;line-height:1.7}
+@media(max-width:768px){.page-hero{padding:110px 0 40px}.page-hero h1{font-size:1.6rem}}
+
+/* ===== Anchor Navigation ===== */
+.selection-nav{
+  position:sticky;top:64px;z-index:90;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+  padding:12px 0;
+}
+.selection-nav .container{display:flex;gap:8px;flex-wrap:wrap;align-items:center;justify-content:center}
+.selection-nav a{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 16px;font-size:.82rem;font-weight:600;
+  color:var(--text-secondary);background:var(--bg-card);
+  border:1px solid var(--border);border-radius:20px;
+  transition:var(--transition);white-space:nowrap;
+}
+.selection-nav a:hover{color:var(--accent);border-color:var(--accent);background:var(--bg-card-hover)}
+.selection-nav a .num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--accent);color:#fff;font-size:.7rem;font-weight:700;
+}
+@media(max-width:768px){
+  .selection-nav{padding:10px 0}
+  .selection-nav .container{gap:6px;justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch;padding-bottom:4px}
+  .selection-nav a{padding:6px 12px;font-size:.78rem;flex-shrink:0}
+}
+
+/* ===== Selection Section ===== */
+.selection-section{background:var(--bg-primary)}
+.selection-section:nth-child(even){background:var(--bg-secondary)}
+.selection-section .container{max-width:900px}
+.selection-section h2{
+  font-size:1.5rem;font-weight:700;color:var(--text-primary);
+  margin-bottom:24px;padding-bottom:12px;
+  border-bottom:2px solid var(--accent);display:inline-block;
+}
+.selection-section h3{
+  font-size:1.15rem;font-weight:700;color:var(--text-primary);
+  margin:32px 0 16px;
+}
+.selection-section p{
+  color:var(--text-secondary);margin-bottom:16px;line-height:1.8;
+}
+.selection-section ul{margin-bottom:20px}
+.selection-section ul li{
+  position:relative;padding-left:24px;margin-bottom:12px;
+  color:var(--text-secondary);line-height:1.7;
+}
+.selection-section ul li::before{
+  content:'';position:absolute;left:0;top:10px;
+  width:6px;height:6px;border-radius:50%;background:var(--accent);
+}
+
+/* ===== Warning / Highlight Box ===== */
+.warning-box{
+  background:rgba(231,76,60,.06);border-left:4px solid var(--danger);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:20px 24px;margin:24px 0;
+}
+.warning-box p{color:var(--text-primary);margin:0;font-weight:500;line-height:1.7}
+.warning-box strong{color:var(--danger)}
+
+.info-box{
+  background:rgba(30,111,217,.06);border-left:4px solid var(--accent);
+  border-radius:0 var(--radius) var(--radius) 0;
+  padding:20px 24px;margin:24px 0;
+}
+.info-box p{color:var(--text-primary);margin:0;font-weight:500;line-height:1.7}
+
+/* ===== Table ===== */
+.selection-table{
+  width:100%;border-collapse:collapse;margin:24px 0;
+  font-size:.88rem;background:var(--bg-card);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.selection-table thead{background:var(--accent)}
+.selection-table thead th{
+  padding:14px 16px;text-align:left;font-weight:600;color:#fff;font-size:.82rem;letter-spacing:.02em;
+}
+.selection-table tbody tr{border-bottom:1px solid var(--border);transition:background .2s}
+.selection-table tbody tr:last-child{border-bottom:none}
+.selection-table tbody tr:hover{background:var(--bg-card-hover)}
+.selection-table tbody td{padding:14px 16px;color:var(--text-secondary);line-height:1.6;vertical-align:top}
+.selection-table tbody td:first-child{font-weight:600;color:var(--text-primary)}
+.selection-table .tip{color:var(--warn);font-weight:500}
+
+@media(max-width:768px){
+  .selection-table{font-size:.8rem}
+  .selection-table thead th,.selection-table tbody td{padding:10px 12px}
+  .selection-table tbody td{display:block;width:100%;border-bottom:1px solid var(--border)}
+  .selection-table tbody tr{display:block;margin-bottom:12px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+  .selection-table tbody td:first-child{background:var(--bg-secondary);font-weight:700}
+  .selection-table tbody td::before{content:attr(data-label)': ';font-weight:600;color:var(--text-primary);display:inline;margin-right:4px}
+  .selection-table thead{display:none}
+}
+
+/* ===== Bottom Notice ===== */
+.bottom-notice{
+  background:var(--bg-secondary);border-top:2px solid var(--accent);
+  padding:40px 0;margin-top:0;
+}
+.bottom-notice .container{max-width:900px}
+.bottom-notice h3{font-size:1.2rem;font-weight:700;color:var(--text-primary);margin-bottom:16px}
+.bottom-notice p{color:var(--text-secondary);line-height:1.8;margin-bottom:12px}
+.bottom-notice .notice-highlight{
+  background:rgba(231,76,60,.08);border-left:4px solid var(--danger);
+  padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;
+  margin-top:16px;
+}
+.bottom-notice .notice-highlight p{color:var(--text-primary);font-weight:500;margin:0}
+.bottom-notice .notice-highlight strong{color:var(--danger)}
+
+/* ===== Footer ===== */
+.footer{
+  background:#0d1730;border-top:1px solid var(--border);
+  padding:48px 0 24px;
+}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{font-size:.85rem;color:var(--text-muted);line-height:1.7;max-width:360px}
+.footer-col h5{font-size:.9rem;color:var(--text-primary);margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;font-size:.85rem;color:var(--text-muted);margin-bottom:10px;transition:var(--transition)}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:.8rem;color:var(--text-muted)}
+
+/* ===== Responsive ===== */
+@media(max-width:968px){
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:2.4rem}
+  .hero-desc{font-size:1rem}
+}
+@media(max-width:640px){
+  .nav{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:24px;gap:20px;z-index:99}
+  .nav.open{display:flex}
+  .menu-toggle{display:flex}
+  .hero{min-height:auto;padding:100px 0 60px}
+  .hero h1{font-size:1.8rem}
+  .section{padding:56px 0}
+  .section-title{font-size:1.5rem}
+  .container{padding:0 16px}
+  .header-inner{padding:0 16px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .selection-section .container{padding:0 20px}
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.page-hero>*{animation:fadeInUp .6s ease backwards}
+.page-hero>*:nth-child(1){animation-delay:.1s}
+.page-hero>*:nth-child(2){animation-delay:.2s}
+.page-hero>*:nth-child(3){animation-delay:.3s}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="24" height="24" rx="6" fill="#1e6fd9"/>
+        <path d="M12 14h12M12 18h12M12 22h12" stroke="#1f2a3d" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="2.5" fill="#1f2a3d"/>
+      </svg>
+      <span>LANGTUO<span style="color:var(--accent)"> VALVE</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="index.html" data-i18n="nav.home">首页</a>
+      <a href="about.html" data-i18n="nav.about">关于我们</a>
+      <a href="products.html" data-i18n="nav.products">产品中心</a>
+      <a href="valve-selection.html" data-i18n="nav.selection" style="color:var(--accent)">选型须知</a>
+      <a href="capabilities.html" data-i18n="nav.capabilities">制造能力</a>
+      <a href="contact.html" data-i18n="nav.contact">联系我们</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">中文</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Page Hero ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html" data-i18n="nav.home">首页</a> <span>&#8250;</span> <span data-i18n="nav.selection">选型须知</span></div>
+    <h1 data-i18n="selection.heroTitle">阀门选型须知</h1>
+    <p data-i18n="selection.heroDesc">阀门的使用寿命、防腐涂层及密封可靠性高度依赖现场工况。仅依靠外观选型，极易发生涂层脱落、阀体腐蚀、内漏等故障。朗拓提供专业阀门工况评估与选型配套服务，根据现场条件匹配阀体材质、内件及表面防腐方案，规避选型失误带来的设备风险。</p>
+  </div>
+</section>
+
+<!-- ===== Anchor Navigation ===== -->
+<nav class="selection-nav">
+  <div class="container">
+    <a href="#overview"><span class="num">1</span><span data-i18n="selection.nav1">选型概述与风险提示</span></a>
+    <a href="#parameters"><span class="num">2</span><span data-i18n="selection.nav2">询价所需工况参数</span></a>
+    <a href="#types"><span class="num">3</span><span data-i18n="selection.nav3">阀门类型及适用工况</span></a>
+    <a href="#coating"><span class="num">4</span><span data-i18n="selection.nav4">涂装防腐选型要点</span></a>
+    <a href="#service"><span class="num">5</span><span data-i18n="selection.nav5">专业选型配套服务</span></a>
+  </div>
+</nav>
+
+<!-- ===== Section 1: Overview ===== -->
+<section class="section selection-section" id="overview">
+  <div class="container">
+    <h2 data-i18n="selection.s1Title">一、询价需提供核心工况参数</h2>
+    <div class="warning-box">
+      <p data-i18n="selection.s1Warning">缺少以下信息，仅可提供外观同款产品，<strong>无法保障长期防腐与使用性能</strong></p>
+    </div>
+    <ul>
+      <li data-i18n="selection.s1i1"><strong>介质：</strong>介质名称、pH 值，是否含固体颗粒、氯离子、硫化氢等腐蚀性组分</li>
+      <li data-i18n="selection.s1i2"><strong>温度：</strong>正常工作温度、瞬时高低温</li>
+      <li data-i18n="selection.s1i3"><strong>压力：</strong>工作压力、冲击压力，压力等级 PN/Class</li>
+      <li data-i18n="selection.s1i4"><strong>安装环境（防腐关键）：</strong>室内 / 露天 / 海边盐雾 / 化工大气，是否长期淋雨、紫外线暴晒</li>
+      <li data-i18n="selection.s1i5"><strong>规格：</strong>公称通径 DN，连接方式与法兰标准（GB/ANSI/DIN）</li>
+      <li data-i18n="selection.s1i6"><strong>材质：</strong>阀体、内件、密封件材质要求</li>
+      <li data-i18n="selection.s1i7"><strong>表面涂装：</strong>常规油漆 / 重防腐涂层 / 不锈钢无涂装，盐雾要求</li>
+      <li data-i18n="selection.s1i8"><strong>驱动：</strong>手动、蜗轮、气动、电动；防爆与防护等级</li>
+      <li data-i18n="selection.s1i9"><strong>功能：</strong>切断、调节、止回、泄压、疏水；开关频次</li>
+      <li data-i18n="selection.s1i10"><strong>执行标准：</strong>GB、ANSI、API、DIN、JIS 等</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Section 2: Valve Types ===== -->
+<section class="section selection-section" id="types">
+  <div class="container">
+    <h2 data-i18n="selection.s2Title">二、阀门类型与适用工况</h2>
+    <table class="selection-table">
+      <thead>
+        <tr>
+          <th data-i18n="selection.thType">阀门类型</th>
+          <th data-i18n="selection.thFunction">核心功能</th>
+          <th data-i18n="selection.thScene">适用场景</th>
+          <th data-i18n="selection.thTip">选型提示</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdGate">闸阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdGateF">全开 / 全关切断，流阻小</td>
+          <td data-label="适用场景" data-i18n="selection.tdGateS">清水、油品、蒸汽，大口径长输管线</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdGateT">不可用于流量调节；户外场景需配套防腐涂装</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdGlobe">截止阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdGlobeF">可靠切断，可小幅节流</td>
+          <td data-label="适用场景" data-i18n="selection.tdGlobeS">蒸汽、油品，中小口径工艺管道</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdGlobeT">流阻较高；潮湿环境优先防锈涂层</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdBall">球阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdBallF">快速启闭，流阻极低</td>
+          <td data-label="适用场景" data-i18n="selection.tdBallS">水、燃气、油品、一般腐蚀介质</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdBallT">含颗粒介质易磨损密封；户外暴晒选用耐 UV 面漆</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdButterfly">蝶阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdButterflyF">结构紧凑，支持开关 / 调节</td>
+          <td data-label="适用场景" data-i18n="selection.tdButterflyS">给排水、烟气，低压中大口径管线</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdButterflyT">海边盐雾环境普通漆面易脱落，需重防腐方案</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdCheck">止回阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdCheckF">单向截止，防止介质倒流</td>
+          <td data-label="适用场景" data-i18n="selection.tdCheckS">泵出口管路，防止回流冲击</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdCheckT">含颗粒介质易造成卡滞，需匹配压力冲击</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdControl">调节阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdControlF">连续精准调节流量 / 压力</td>
+          <td data-label="适用场景" data-i18n="selection.tdControlS">化工、电厂工艺回路</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdControlT">腐蚀、温度波动会损耗内件，不可仅凭外观选型</td>
+        </tr>
+        <tr>
+          <td data-label="阀门类型" data-i18n="selection.tdTrap">疏水阀</td>
+          <td data-label="核心功能" data-i18n="selection.tdTrapF">自动排冷凝水、阻蒸汽</td>
+          <td data-label="适用场景" data-i18n="selection.tdTrapS">蒸汽管道与换热设备</td>
+          <td data-label="选型提示" class="tip" data-i18n="selection.tdTrapT">需匹配压差，选型不当会造成积水腐蚀</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Section 3: Coating ===== -->
+<section class="section selection-section" id="coating">
+  <div class="container">
+    <h2 data-i18n="selection.s3Title">三、涂装防腐选型要点（针对漆面脱落问题）</h2>
+    <ul>
+      <li data-i18n="selection.s3i1"><strong>室内干燥环境：</strong>常规底漆 + 面漆，基础防锈</li>
+      <li data-i18n="selection.s3i2"><strong>普通露天环境：</strong>环氧底漆 + 环氧面漆，耐雨水老化</li>
+      <li data-i18n="selection.s3i3"><strong>沿海盐雾 / 化工腐蚀大气：</strong>重防腐体系（环氧富锌底漆 + 中间漆 + 聚氨酯面漆），抗氯离子、抗紫外线，防止掉漆</li>
+      <li data-i18n="selection.s3i4"><strong>不锈钢阀体：</strong>无需油漆，但氯离子环境仍会产生点蚀，不能单凭外观判定耐腐蚀性</li>
+    </ul>
+    <div class="info-box">
+      <p data-i18n="selection.s3Note"><strong>提示：</strong>涂装方案必须与安装环境严格匹配，错误的涂层选择是导致漆面脱落和阀体腐蚀的主要原因。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 4: Service ===== -->
+<section class="section selection-section" id="service">
+  <div class="container">
+    <h2 data-i18n="selection.s4Title">四、朗拓选型服务</h2>
+    <ul>
+      <li data-i18n="selection.s4i1">根据完整工况匹配阀门型号、材质、压力等级，评估安装环境，推荐适配的表面防腐方案</li>
+      <li data-i18n="selection.s4i2">针对高温、强腐蚀、盐雾、含颗粒介质等复杂工况提供技术评估</li>
+      <li data-i18n="selection.s4i3">核对产品标准、法兰及涂装技术要求，可配套材质证明、涂层检测文件</li>
+      <li data-i18n="selection.s4i4">出具选型方案，拒绝仅依靠外观选型</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Bottom Notice ===== -->
+<section class="bottom-notice">
+  <div class="container">
+    <h3 data-i18n="selection.noticeTitle">底部提示</h3>
+    <p data-i18n="selection.noticeP1">若仅提供外观或型号询价，缺少工况、环境及防腐要求，我们仅能提供外观一致产品，<strong>不承诺长期防腐性能，存在涂层脱落、腐蚀失效风险</strong>。请提供完整工况，获取可靠选型方案。</p>
+    <div class="notice-highlight">
+      <p data-i18n="selection.noticeP2">朗拓建议：请尽可能提供完整的工况参数表，以便我们为您提供精准的阀门选型方案与配套防腐建议，保障设备长期稳定运行。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="24" height="24" rx="6" fill="#1e6fd9"/>
+            <path d="M12 14h12M12 18h12M12 22h12" stroke="#1f2a3d" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="2.5" fill="#1f2a3d"/>
+          </svg>
+          <span>LANGTUO<span style="color:var(--accent)"> VALVE</span></span>
+        </a>
+        <p data-i18n="footer.desc">深圳市朗拓阀门有限公司 — 面向全球工业客户的专业工业阀门供应链服务商。</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.products">产品</h5>
+        <a href="products.html" data-i18n="footer.p1">调节阀</a>
+        <a href="products.html" data-i18n="footer.p2">闸阀</a>
+        <a href="products.html" data-i18n="footer.p3">球阀</a>
+        <a href="products.html" data-i18n="footer.p4">蝶阀</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.company">公司</h5>
+        <a href="about.html" data-i18n="footer.c1">关于我们</a>
+        <a href="capabilities.html" data-i18n="footer.c2">制造能力</a>
+        <a href="valve-selection.html" data-i18n="footer.c3">选型须知</a>
+        <a href="contact.html" data-i18n="footer.c4">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shenzhen Langtuo Valve Co., Ltd. <span data-i18n="footer.rights">保留所有权利。</span></p>
+      <p data-i18n="footer.addr">深圳市龙岗区坂田街道坂田社区黄君山远雄大厦2栋3A11 · 深圳 · 中国</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+var currentLang = 'zh';
+
+var i18n = {
+  zh: {
+    'nav.home': '首页',
+    'nav.about': '关于我们',
+    'nav.products': '产品中心',
+    'nav.selection': '选型须知',
+    'nav.capabilities': '制造能力',
+    'nav.contact': '联系我们',
+    'selection.heroTitle': '阀门选型须知',
+    'selection.heroDesc': '阀门的使用寿命、防腐涂层及密封可靠性高度依赖现场工况。仅依靠外观选型，极易发生涂层脱落、阀体腐蚀、内漏等故障。朗拓提供专业阀门工况评估与选型配套服务，根据现场条件匹配阀体材质、内件及表面防腐方案，规避选型失误带来的设备风险。',
+    'selection.nav1': '选型概述与风险提示',
+    'selection.nav2': '询价所需工况参数',
+    'selection.nav3': '阀门类型及适用工况',
+    'selection.nav4': '涂装防腐选型要点',
+    'selection.nav5': '专业选型配套服务',
+    'selection.s1Title': '一、询价需提供核心工况参数',
+    'selection.s1Warning': '缺少以下信息，仅可提供外观同款产品，<strong>无法保障长期防腐与使用性能</strong>',
+    'selection.s1i1': '<strong>介质：</strong>介质名称、pH 值，是否含固体颗粒、氯离子、硫化氢等腐蚀性组分',
+    'selection.s1i2': '<strong>温度：</strong>正常工作温度、瞬时高低温',
+    'selection.s1i3': '<strong>压力：</strong>工作压力、冲击压力，压力等级 PN/Class',
+    'selection.s1i4': '<strong>安装环境（防腐关键）：</strong>室内 / 露天 / 海边盐雾 / 化工大气，是否长期淋雨、紫外线暴晒',
+    'selection.s1i5': '<strong>规格：</strong>公称通径 DN，连接方式与法兰标准（GB/ANSI/DIN）',
+    'selection.s1i6': '<strong>材质：</strong>阀体、内件、密封件材质要求',
+    'selection.s1i7': '<strong>表面涂装：</strong>常规油漆 / 重防腐涂层 / 不锈钢无涂装，盐雾要求',
+    'selection.s1i8': '<strong>驱动：</strong>手动、蜗轮、气动、电动；防爆与防护等级',
+    'selection.s1i9': '<strong>功能：</strong>切断、调节、止回、泄压、疏水；开关频次',
+    'selection.s1i10': '<strong>执行标准：</strong>GB、ANSI、API、DIN、JIS 等',
+    'selection.s2Title': '二、阀门类型与适用工况',
+    'selection.thType': '阀门类型',
+    'selection.thFunction': '核心功能',
+    'selection.thScene': '适用场景',
+    'selection.thTip': '选型提示',
+    'selection.tdGate': '闸阀',
+    'selection.tdGateF': '全开 / 全关切断，流阻小',
+    'selection.tdGateS': '清水、油品、蒸汽，大口径长输管线',
+    'selection.tdGateT': '不可用于流量调节；户外场景需配套防腐涂装',
+    'selection.tdGlobe': '截止阀',
+    'selection.tdGlobeF': '可靠切断，可小幅节流',
+    'selection.tdGlobeS': '蒸汽、油品，中小口径工艺管道',
+    'selection.tdGlobeT': '流阻较高；潮湿环境优先防锈涂层',
+    'selection.tdBall': '球阀',
+    'selection.tdBallF': '快速启闭，流阻极低',
+    'selection.tdBallS': '水、燃气、油品、一般腐蚀介质',
+    'selection.tdBallT': '含颗粒介质易磨损密封；户外暴晒选用耐 UV 面漆',
+    'selection.tdButterfly': '蝶阀',
+    'selection.tdButterflyF': '结构紧凑，支持开关 / 调节',
+    'selection.tdButterflyS': '给排水、烟气，低压中大口径管线',
+    'selection.tdButterflyT': '海边盐雾环境普通漆面易脱落，需重防腐方案',
+    'selection.tdCheck': '止回阀',
+    'selection.tdCheckF': '单向截止，防止介质倒流',
+    'selection.tdCheckS': '泵出口管路，防止回流冲击',
+    'selection.tdCheckT': '含颗粒介质易造成卡滞，需匹配压力冲击',
+    'selection.tdControl': '调节阀',
+    'selection.tdControlF': '连续精准调节流量 / 压力',
+    'selection.tdControlS': '化工、电厂工艺回路',
+    'selection.tdControlT': '腐蚀、温度波动会损耗内件，不可仅凭外观选型',
+    'selection.tdTrap': '疏水阀',
+    'selection.tdTrapF': '自动排冷凝水、阻蒸汽',
+    'selection.tdTrapS': '蒸汽管道与换热设备',
+    'selection.tdTrapT': '需匹配压差，选型不当会造成积水腐蚀',
+    'selection.s3Title': '三、涂装防腐选型要点（针对漆面脱落问题）',
+    'selection.s3i1': '<strong>室内干燥环境：</strong>常规底漆 + 面漆，基础防锈',
+    'selection.s3i2': '<strong>普通露天环境：</strong>环氧底漆 + 环氧面漆，耐雨水老化',
+    'selection.s3i3': '<strong>沿海盐雾 / 化工腐蚀大气：</strong>重防腐体系（环氧富锌底漆 + 中间漆 + 聚氨酯面漆），抗氯离子、抗紫外线，防止掉漆',
+    'selection.s3i4': '<strong>不锈钢阀体：</strong>无需油漆，但氯离子环境仍会产生点蚀，不能单凭外观判定耐腐蚀性',
+    'selection.s3Note': '<strong>提示：</strong>涂装方案必须与安装环境严格匹配，错误的涂层选择是导致漆面脱落和阀体腐蚀的主要原因。',
+    'selection.s4Title': '四、朗拓选型服务',
+    'selection.s4i1': '根据完整工况匹配阀门型号、材质、压力等级，评估安装环境，推荐适配的表面防腐方案',
+    'selection.s4i2': '针对高温、强腐蚀、盐雾、含颗粒介质等复杂工况提供技术评估',
+    'selection.s4i3': '核对产品标准、法兰及涂装技术要求，可配套材质证明、涂层检测文件',
+    'selection.s4i4': '出具选型方案，拒绝仅依靠外观选型',
+    'selection.noticeTitle': '底部提示',
+    'selection.noticeP1': '若仅提供外观或型号询价，缺少工况、环境及防腐要求，我们仅能提供外观一致产品，<strong>不承诺长期防腐性能，存在涂层脱落、腐蚀失效风险</strong>。请提供完整工况，获取可靠选型方案。',
+    'selection.noticeP2': '朗拓建议：请尽可能提供完整的工况参数表，以便我们为您提供精准的阀门选型方案与配套防腐建议，保障设备长期稳定运行。',
+    'footer.desc': '深圳市朗拓阀门有限公司 — 面向全球工业客户的专业工业阀门供应链服务商。',
+    'footer.products': '产品',
+    'footer.p1': '调节阀',
+    'footer.p2': '闸阀',
+    'footer.p3': '球阀',
+    'footer.p4': '蝶阀',
+    'footer.company': '公司',
+    'footer.c1': '关于我们',
+    'footer.c2': '制造能力',
+    'footer.c3': '选型须知',
+    'footer.c4': '联系我们',
+    'footer.rights': '保留所有权利。',
+    'footer.addr': '深圳市龙岗区坂田街道坂田社区黄君山远雄大厦2栋3A11 · 深圳 · 中国',
+  },
+  en: {
+    'nav.home': 'Home',
+    'nav.about': 'About',
+    'nav.products': 'Products',
+    'nav.selection': 'Selection Guide',
+    'nav.capabilities': 'Capabilities',
+    'nav.contact': 'Contact',
+    'selection.heroTitle': 'Valve Selection Guide',
+    'selection.heroDesc': 'Valve service life, anti-corrosion coating integrity, and sealing reliability are highly dependent on actual operating conditions. Selecting valves based solely on appearance often leads to coating peeling, body corrosion, and internal leakage. Langtuo provides professional valve condition assessment and selection support, matching body materials, internals, and surface anti-corrosion solutions to site conditions to avoid equipment risks from selection errors.',
+    'selection.nav1': 'Overview & Risk Alert',
+    'selection.nav2': 'Required Operating Parameters',
+    'selection.nav3': 'Valve Types & Applications',
+    'selection.nav4': 'Coating & Anti-Corrosion',
+    'selection.nav5': 'Professional Selection Service',
+    'selection.s1Title': '1. Core Operating Parameters Required for Inquiry',
+    'selection.s1Warning': 'Without the following information, we can only provide visually equivalent products, <strong>and cannot guarantee long-term anti-corrosion or operational performance</strong>',
+    'selection.s1i1': '<strong>Medium:</strong> Medium name, pH value, and whether it contains solid particles, chloride ions, hydrogen sulfide, or other corrosive components',
+    'selection.s1i2': '<strong>Temperature:</strong> Normal operating temperature, instantaneous high/low temperatures',
+    'selection.s1i3': '<strong>Pressure:</strong> Working pressure, surge pressure, pressure rating PN/Class',
+    'selection.s1i4': '<strong>Installation Environment (critical for anti-corrosion):</strong> Indoor / outdoor / coastal salt spray / chemical atmosphere, whether exposed to long-term rain or UV radiation',
+    'selection.s1i5': '<strong>Size:</strong> Nominal diameter DN, connection type and flange standard (GB/ANSI/DIN)',
+    'selection.s1i6': '<strong>Material:</strong> Body, trim, and sealing material requirements',
+    'selection.s1i7': '<strong>Surface Coating:</strong> Conventional paint / heavy-duty anti-corrosion coating / no coating for stainless steel, salt spray requirements',
+    'selection.s1i8': '<strong>Actuation:</strong> Manual, worm gear, pneumatic, electric; explosion-proof and protection ratings',
+    'selection.s1i9': '<strong>Function:</strong> On-off, throttling, check, relief, steam trap; switching frequency',
+    'selection.s1i10': '<strong>Applicable Standards:</strong> GB, ANSI, API, DIN, JIS, etc.',
+    'selection.s2Title': '2. Valve Types and Applicable Conditions',
+    'selection.thType': 'Valve Type',
+    'selection.thFunction': 'Core Function',
+    'selection.thScene': 'Applicable Scenarios',
+    'selection.thTip': 'Selection Tip',
+    'selection.tdGate': 'Gate Valve',
+    'selection.tdGateF': 'Full open / close isolation, low flow resistance',
+    'selection.tdGateS': 'Water, oil, steam, large-diameter long-distance pipelines',
+    'selection.tdGateT': 'Not for flow regulation; outdoor use requires anti-corrosion coating',
+    'selection.tdGlobe': 'Globe Valve',
+    'selection.tdGlobeF': 'Reliable isolation, slight throttling possible',
+    'selection.tdGlobeS': 'Steam, oil, small and medium process piping',
+    'selection.tdGlobeT': 'Higher flow resistance; humid environments require rust-prevention coating',
+    'selection.tdBall': 'Ball Valve',
+    'selection.tdBallF': 'Quick open/close, extremely low flow resistance',
+    'selection.tdBallS': 'Water, gas, oil, general corrosive media',
+    'selection.tdBallT': 'Particle-laden media wears seals; UV-resistant topcoat for outdoor exposure',
+    'selection.tdButterfly': 'Butterfly Valve',
+    'selection.tdButterflyF': 'Compact, supports on-off / throttling',
+    'selection.tdButterflyS': 'Water supply/drainage, flue gas, low-pressure large-diameter lines',
+    'selection.tdButterflyT': 'Coastal salt spray causes ordinary paint to peel; heavy-duty anti-corrosion required',
+    'selection.tdCheck': 'Check Valve',
+    'selection.tdCheckF': 'One-way shutoff, prevents backflow',
+    'selection.tdCheckS': 'Pump outlet lines, prevents backflow impact',
+    'selection.tdCheckT': 'Particle-laden media causes jamming; match surge pressure',
+    'selection.tdControl': 'Control Valve',
+    'selection.tdControlF': 'Continuous precise flow / pressure regulation',
+    'selection.tdControlS': 'Chemical and power plant process loops',
+    'selection.tdControlT': 'Corrosion and temperature fluctuations damage internals; do not select by appearance alone',
+    'selection.tdTrap': 'Steam Trap',
+    'selection.tdTrapF': 'Automatically drains condensate, blocks steam',
+    'selection.tdTrapS': 'Steam piping and heat exchange equipment',
+    'selection.tdTrapT': 'Must match pressure differential; improper selection causes water accumulation and corrosion',
+    'selection.s3Title': '3. Coating & Anti-Corrosion Selection Points (Addressing Paint Peeling)',
+    'selection.s3i1': '<strong>Indoor dry environment:</strong> Standard primer + topcoat, basic rust prevention',
+    'selection.s3i2': '<strong>General outdoor environment:</strong> Epoxy primer + epoxy topcoat, resistant to rain aging',
+    'selection.s3i3': '<strong>Coastal salt spray / chemical corrosive atmosphere:</strong> Heavy-duty anti-corrosion system (epoxy zinc-rich primer + intermediate coat + polyurethane topcoat), resistant to chloride ions and UV, preventing paint peeling',
+    'selection.s3i4': '<strong>Stainless steel body:</strong> No paint required, but chloride environments still cause pitting corrosion; corrosion resistance cannot be judged by appearance alone',
+    'selection.s3Note': '<strong>Note:</strong> Coating solutions must strictly match the installation environment. Incorrect coating selection is the main cause of paint peeling and body corrosion.',
+    'selection.s4Title': '4. Langtuo Selection Service',
+    'selection.s4i1': 'Match valve model, material, and pressure rating based on complete operating conditions, evaluate installation environment, and recommend suitable surface anti-corrosion solutions',
+    'selection.s4i2': 'Provide technical assessment for complex conditions such as high temperature, strong corrosion, salt spray, and particle-laden media',
+    'selection.s4i3': 'Verify product standards, flange, and coating technical requirements, with supporting material certificates and coating inspection documents available',
+    'selection.s4i4': 'Provide formal selection proposals; reject appearance-only selection',
+    'selection.noticeTitle': 'Important Notice',
+    'selection.noticeP1': 'If only appearance or model is provided for inquiry, without operating conditions, environment, and anti-corrosion requirements, we can only provide visually equivalent products, <strong>with no commitment to long-term anti-corrosion performance, and risk of coating peeling and corrosion failure</strong>. Please provide complete operating conditions to obtain a reliable selection proposal.',
+    'selection.noticeP2': 'Langtuo Recommendation: Please provide as complete an operating parameter sheet as possible, so that we can provide you with accurate valve selection proposals and supporting anti-corrosion recommendations to ensure long-term stable equipment operation.',
+    'footer.desc': 'Shenzhen Langtuo Valve Co., Ltd — Professional industrial valve supply chain service provider for global industrial customers.',
+    'footer.products': 'Products',
+    'footer.p1': 'Control Valves',
+    'footer.p2': 'Gate Valves',
+    'footer.p3': 'Ball Valves',
+    'footer.p4': 'Butterfly Valves',
+    'footer.company': 'Company',
+    'footer.c1': 'About Us',
+    'footer.c2': 'Capabilities',
+    'footer.c3': 'Selection Guide',
+    'footer.c4': 'Contact Us',
+    'footer.rights': 'All Rights Reserved.',
+    'footer.addr': '2-3A11, Bldg 2, Yuanxiong Bldg, Huangjunshan, Bantian, Longgang, Shenzhen, China',
+  }
+};
+
+/* ===== Language Switching ===== */
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);
+  }
+  var elements = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key] !== undefined) {
+      el.innerHTML = i18n[lang][key];
+    }
+  }
+}
+
+/* ===== Mobile Menu Toggle ===== */
+function toggleMenu() {
+  var nav = document.getElementById('nav');
+  nav.classList.toggle('open');
+}
+
+/* Close mobile menu on nav click */
+var navLinks = document.querySelectorAll('.nav a');
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function() {
+    document.getElementById('nav').classList.remove('open');
+  });
+}
+
+/* Header scroll effect */
+window.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+  if (window.scrollY > 60) {
+    header.style.height = '56px';
+  } else {
+    header.style.height = '64px';
+  }
+});
+
+/* ===== Cross-page language persistence (?lang=zh|en) ===== */
+document.addEventListener('click', function(e) {
+  var t = e.target;
+  while (t && t !== document && !(t.tagName === 'A' && /\.html/.test(t.getAttribute('href') || ''))) {
+    t = t.parentNode;
+  }
+if (t && t !== document) {
+    var href = t.getAttribute('href');
+    var hash = '';
+    var qi = href.indexOf('#');
+    if (qi !== -1) { hash = href.slice(qi); href = href.slice(0, qi); }
+    href = href.replace(/([?&])lang=[^&]*/, '$1lang=' + currentLang);
+    if (href.indexOf('lang=') === -1) {
+      href = href + (href.indexOf('?') === -1 ? '?' : '&') + 'lang=' + currentLang;
+    }
+    t.setAttribute('href', href + hash);
+  }
+}, true);
+(function() {
+  var m = (location.search || '').match(/[?&]lang=(zh|en)/);
+  if (m && m[1] !== currentLang && typeof switchLang === 'function') { switchLang(m[1]); }
+})();
+</script>
+</body>
+</html>

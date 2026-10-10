@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="深圳市朗拓阀门有限公司 - 面向全球工业客户的专业工业阀门供应链服务商，依托珠三角成熟完善的供应链资源，为海外客户提供高品质阀门产品与一站式采购配套方案。Shenzhen Langtuo Valve Co., Ltd - Professional industrial valve supply chain service provider for global industrial customers.">
+<meta name="keywords" content="阀门,工业阀门,调节阀,闸阀,截止阀,球阀,蝶阀,止回阀,valve,industrial valve,control valve,gate valve,globe valve,ball valve,butterfly valve,check valve,Langtuo,Shenzhen">
+<meta name="author" content="Shenzhen Langtuo Valve Co., Ltd">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Shenzhen Langtuo Valve Co., Ltd | Professional Valve Manufacturer">
+<meta property="og:description" content="Professional industrial valve manufacturer providing control valves, gate valves, globe valves, ball valves, butterfly valves and more.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<title>深圳市朗拓阀门有限公司 | Shenzhen Langtuo Valve Co., Ltd</title>
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Segoe UI','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;line-height:1.6;color:#c8d1e0;background:#0a0f1a;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+ul{list-style:none}
+
+/* ===== CSS Variables ===== */
+:root{
+  --bg-primary:#0a0f1a;
+  --bg-secondary:#0f1729;
+  --bg-card:#131d33;
+  --bg-card-hover:#182240;
+  --border:#1e2a47;
+  --text-primary:#e8edf5;
+  --text-secondary:#8b9bb5;
+  --text-muted:#5a6a85;
+  --accent:#00a8e8;
+  --accent-glow:rgba(0,168,232,.15);
+  --accent-2:#0077b6;
+  --success:#2ecc71;
+  --warn:#f39c12;
+  --radius:8px;
+  --radius-lg:16px;
+  --shadow:0 4px 24px rgba(0,0,0,.4);
+  --shadow-lg:0 8px 40px rgba(0,0,0,.5);
+  --transition:all .3s ease;
+  --max-width:1200px;
+}
+
+/* ===== Layout ===== */
+.container{max-width:var(--max-width);margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section-title{font-size:2rem;font-weight:700;color:var(--text-primary);margin-bottom:12px;letter-spacing:-.02em}
+.section-subtitle{font-size:1.05rem;color:var(--text-secondary);margin-bottom:48px;max-width:640px}
+.section-header{text-align:center;margin-bottom:56px}
+.section-header .section-subtitle{margin:12px auto 0}
+.divider{width:48px;height:3px;background:var(--accent);border-radius:2px;margin:16px auto 0}
+
+/* ===== Header ===== */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(10,15,26,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  transition:var(--transition);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;max-width:var(--max-width);margin:0 auto;padding:0 24px;
+}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:700;color:var(--text-primary);white-space:nowrap}
+.logo-icon{width:36px;height:36px;flex-shrink:0}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{font-size:.9rem;color:var(--text-secondary);transition:var(--transition);font-weight:500}
+.nav a:hover{color:var(--accent)}
+.header-actions{display:flex;align-items:center;gap:16px}
+.lang-toggle{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:20px;padding:4px;cursor:pointer;
+  transition:var(--transition);
+}
+.lang-btn{
+  background:none;border:none;cursor:pointer;
+  padding:6px 14px;font-size:.82rem;font-weight:600;
+  color:var(--text-muted);border-radius:16px;
+  transition:var(--transition);
+}
+.lang-btn.active{background:var(--accent);color:#fff}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.menu-toggle span{display:block;width:22px;height:2px;background:var(--text-primary);border-radius:2px;transition:var(--transition)}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  padding-top:64px;overflow:hidden;
+  background:linear-gradient(135deg,#0a0f1a 0%,#0d1f3a 40%,#0a1528 100%);
+}
+.hero::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(0,168,232,.08) 0%,transparent 50%),
+    radial-gradient(circle at 80% 70%,rgba(0,119,182,.06) 0%,transparent 50%);
+  pointer-events:none;
+}
+.hero-bg-pattern{
+  position:absolute;top:0;left:0;right:0;bottom:0;opacity:.04;
+  background-image:
+    linear-gradient(rgba(0,168,232,.5) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,168,232,.5) 1px,transparent 1px);
+  background-size:50px 50px;
+  pointer-events:none;
+}
+.hero-content{position:relative;z-index:2;max-width:800px}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(0,168,232,.1);border:1px solid rgba(0,168,232,.3);
+  color:var(--accent);font-size:.8rem;font-weight:600;
+  padding:6px 16px;border-radius:20px;margin-bottom:24px;
+  letter-spacing:.05em;
+}
+.hero-tag::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;box-shadow:0 0 8px var(--accent)}
+.hero h1{
+  font-size:3.2rem;font-weight:800;color:var(--text-primary);
+  line-height:1.15;letter-spacing:-.03em;margin-bottom:24px;
+}
+.hero h1 .accent{color:var(--accent)}
+.hero-desc{
+  font-size:1.15rem;color:var(--text-secondary);
+  margin-bottom:40px;max-width:640px;line-height:1.7;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 32px;font-size:.92rem;font-weight:600;
+  border-radius:var(--radius);cursor:pointer;
+  transition:var(--transition);border:none;
+}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-2);box-shadow:0 0 24px var(--accent-glow)}
+.btn-outline{background:transparent;color:var(--text-primary);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+.hero-stats{
+  display:flex;gap:48px;margin-top:64px;padding-top:40px;
+  border-top:1px solid var(--border);flex-wrap:wrap;
+}
+.stat{text-align:left}
+.stat-num{font-size:2.2rem;font-weight:800;color:var(--accent);line-height:1}
+.stat-label{font-size:.82rem;color:var(--text-muted);margin-top:6px}
+
+/* ===== About ===== */
+.about{background:var(--bg-secondary)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-text p{color:var(--text-secondary);margin-bottom:20px;line-height:1.8}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.about-feature{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:16px;background:var(--bg-card);border-radius:var(--radius);
+  border:1px solid var(--border);
+}
+.about-feature-icon{width:40px;height:40px;flex-shrink:0;color:var(--accent)}
+.about-feature h4{font-size:.9rem;color:var(--text-primary);margin-bottom:4px}
+.about-feature p{font-size:.8rem;color:var(--text-muted);margin:0}
+.about-visual{
+  position:relative;aspect-ratio:1/1;max-width:480px;margin:0 auto;
+  border-radius:var(--radius-lg);overflow:hidden;
+  background:linear-gradient(135deg,var(--bg-card) 0%,var(--bg-secondary) 100%);
+  border:1px solid var(--border);
+}
+.about-visual svg{width:100%;height:100%}
+
+/* ===== Products ===== */
+.products{background:var(--bg-primary)}
+.product-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.product-card{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-lg);overflow:hidden;
+  transition:var(--transition);cursor:pointer;
+}
+.product-card:hover{background:var(--bg-card-hover);border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--shadow)}
+.product-img{
+  position:relative;aspect-ratio:4/3;overflow:hidden;
+  background:linear-gradient(135deg,#0d1f3a,#131d33);
+  display:flex;align-items:center;justify-content:center;
+}
+.product-img svg{width:60%;height:60%}
+.product-tag{
+  position:absolute;top:12px;right:12px;
+  background:rgba(0,168,232,.9);color:#fff;
+  font-size:.7rem;font-weight:700;padding:4px 10px;
+  border-radius:4px;letter-spacing:.05em;
+}
+.product-body{padding:24px}
+.product-body h3{font-size:1.1rem;color:var(--text-primary);margin-bottom:8px}
+.product-body p{font-size:.85rem;color:var(--text-secondary);margin-bottom:16px;line-height:1.6}
+.product-specs{display:flex;flex-wrap:wrap;gap:8px}
+.product-spec{
+  background:rgba(0,168,232,.08);border:1px solid rgba(0,168,232,.2);
+  color:var(--accent);font-size:.72rem;font-weight:600;
+  padding:3px 10px;border-radius:4px;
+}
+
+/* ===== Capabilities ===== */
+.capabilities{background:var(--bg-secondary)}
+.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cap-item{
+  text-align:center;padding:32px 20px;
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-lg);transition:var(--transition);
+}
+.cap-item:hover{border-color:var(--accent);background:var(--bg-card-hover)}
+.cap-icon{width:48px;height:48px;margin:0 auto 16px;color:var(--accent)}
+.cap-item h4{font-size:.95rem;color:var(--text-primary);margin-bottom:8px}
+.cap-item p{font-size:.8rem;color:var(--text-muted);line-height:1.5}
+
+/* ===== Certifications ===== */
+.cert-section{background:var(--bg-primary)}
+.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.cert-card{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:32px 16px;background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-lg);transition:var(--transition);text-align:center;
+}
+.cert-card:hover{border-color:var(--accent)}
+.cert-badge{width:56px;height:56px;margin-bottom:12px;color:var(--accent)}
+.cert-card h4{font-size:.85rem;color:var(--text-primary);margin-bottom:4px}
+.cert-card p{font-size:.75rem;color:var(--text-muted)}
+
+/* ===== Contact ===== */
+.contact{background:var(--bg-secondary)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info h3{font-size:1.3rem;color:var(--text-primary);margin-bottom:24px}
+.contact-list{margin-bottom:32px}
+.contact-item{
+  display:flex;align-items:flex-start;gap:16px;
+  margin-bottom:20px;padding-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+.contact-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.contact-icon{width:24px;height:24px;flex-shrink:0;color:var(--accent);margin-top:2px}
+.contact-item h4{font-size:.88rem;color:var(--text-primary);margin-bottom:4px}
+.contact-item p{font-size:.85rem;color:var(--text-secondary)}
+.contact-form{
+  background:var(--bg-card);border:1px solid var(--border);
+  border-radius:var(--radius-lg);padding:32px;
+}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.85rem;color:var(--text-secondary);margin-bottom:8px;font-weight:500}
+.form-input{
+  width:100%;padding:12px 16px;font-size:.9rem;
+  background:var(--bg-primary);border:1px solid var(--border);
+  border-radius:var(--radius);color:var(--text-primary);
+  transition:var(--transition);font-family:inherit;
+}
+.form-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-glow)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-submit{
+  width:100%;padding:14px;font-size:.92rem;font-weight:600;
+  background:var(--accent);color:#fff;border:none;
+  border-radius:var(--radius);cursor:pointer;
+  transition:var(--transition);
+}
+.form-submit:hover{background:var(--accent-2)}
+
+/* ===== Footer ===== */
+.footer{
+  background:#060912;border-top:1px solid var(--border);
+  padding:48px 0 24px;
+}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:32px}
+.footer-brand .logo{margin-bottom:16px}
+.footer-brand p{font-size:.85rem;color:var(--text-muted);line-height:1.7;max-width:360px}
+.footer-col h5{font-size:.9rem;color:var(--text-primary);margin-bottom:16px;font-weight:600}
+.footer-col a{display:block;font-size:.85rem;color:var(--text-muted);margin-bottom:10px;transition:var(--transition)}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{
+  border-top:1px solid var(--border);padding-top:24px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-bottom p{font-size:.8rem;color:var(--text-muted)}
+
+/* ===== Responsive ===== */
+@media(max-width:968px){
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+  .product-grid{grid-template-columns:repeat(2,1fr)}
+  .cap-grid,.cert-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:2.4rem}
+  .hero-desc{font-size:1rem}
+  .hero-stats{gap:32px}
+  .stat-num{font-size:1.8rem}
+}
+@media(max-width:640px){
+  .nav{display:none;position:fixed;top:64px;left:0;right:0;flex-direction:column;background:var(--bg-secondary);border-bottom:1px solid var(--border);padding:24px;gap:20px;z-index:99}
+  .nav.open{display:flex}
+  .menu-toggle{display:flex}
+  .product-grid,.cap-grid,.cert-grid,.about-features{grid-template-columns:1fr}
+  .hero{min-height:auto;padding:100px 0 60px}
+  .hero h1{font-size:1.8rem}
+  .section{padding:56px 0}
+  .section-title{font-size:1.5rem}
+  .container{padding:0 16px}
+  .header-inner{padding:0 16px}
+  .contact-form{padding:24px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}}
+.hero-content>*{animation:fadeInUp .6s ease backwards}
+.hero-content>*:nth-child(1){animation-delay:.1s}
+.hero-content>*:nth-child(2){animation-delay:.2s}
+.hero-content>*:nth-child(3){animation-delay:.3s}
+.hero-content>*:nth-child(4){animation-delay:.4s}
+.hero-content>*:nth-child(5){animation-delay:.5s}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="#hero" class="logo">
+      <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="24" height="24" rx="6" fill="#00a8e8"/>
+        <path d="M12 14h12M12 18h12M12 22h12" stroke="#0a0f1a" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="18" cy="18" r="2.5" fill="#0a0f1a"/>
+      </svg>
+      <span>LANGTUO<span style="color:var(--accent)"> VALVE</span></span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#hero" data-i18n="nav.home">首页</a>
+      <a href="#about" data-i18n="nav.about">关于我们</a>
+      <a href="#products" data-i18n="nav.products">产品中心</a>
+      <a href="#capabilities" data-i18n="nav.capabilities">制造能力</a>
+      <a href="#contact" data-i18n="nav.contact">联系我们</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle">
+        <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">中文</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLang('en')">EN</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-tag" data-i18n="hero.tag">专业工业阀门供应链服务商</span>
+      <h1 data-i18n="hero.title">为全球工业提供<span class="accent">精密阀门</span>解决方案</h1>
+      <p class="hero-desc" data-i18n="hero.desc">深圳市朗拓阀门有限公司，是面向全球工业客户的专业工业阀门供应链服务商。依托珠三角成熟完善的供应链资源，为海外客户提供高品质阀门产品与一站式采购配套方案。</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary" data-i18n="hero.cta1">浏览产品</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero.cta2">获取报价</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">15<span style="font-size:1.2rem">+</span></div>
+          <div class="stat-label" data-i18n="hero.stat1">年行业经验</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">50<span style="font-size:1.2rem">+</span></div>
+          <div class="stat-label" data-i18n="hero.stat2">产品型号</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">30<span style="font-size:1.2rem">+</span></div>
+          <div class="stat-label" data-i18n="hero.stat3">出口国家</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">ISO</div>
+          <div class="stat-label" data-i18n="hero.stat4">质量认证</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-header" style="text-align:left">
+          <h2 class="section-title" data-i18n="about.title">关于朗拓</h2>
+          <div class="divider" style="margin:16px 0 0"></div>
+        </div>
+        <p data-i18n="about.p1">深圳市朗拓阀门有限公司，是面向全球工业客户的专业工业阀门供应链服务商。公司坐落于制造业重镇深圳，依托珠三角成熟完善的供应链资源，为海外客户提供高品质阀门产品与一站式采购配套方案。</p>
+        <p data-i18n="about.p2">我们执行严格的全链条质量监管，从原材料溯源到出货前检验层层把控。所有供应产品均按照 GB、ANSI、API、DIN、JIS 等国际标准生产，符合 ISO 9001 质量管理体系规范。</p>
+        <div class="about-features">
+          <div class="about-feature">
+            <svg class="about-feature-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <h4 data-i18n="about.f1">质量控制</h4>
+              <p data-i18n="about.f1d">ISO9001 标准品控监管</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <svg class="about-feature-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 10v10l6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h4 data-i18n="about.f2">快速交期</h4>
+              <p data-i18n="about.f2d">稳定供应链保障准时交付</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <svg class="about-feature-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M20 12v16M12 20h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <h4 data-i18n="about.f3">定制方案</h4>
+              <p data-i18n="about.f3d">阀门规格定制与配置配套</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <svg class="about-feature-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 20c0-4 4-8 8-8s8 4 8 8-4 8-8 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="3" fill="currentColor"/>
+            </svg>
+            <div>
+              <h4 data-i18n="about.f4">全球业务</h4>
+              <p data-i18n="about.f4d">服务 30 多个国家和地区</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#00a8e8" stop-opacity=".15"/>
+              <stop offset="1" stop-color="#0077b6" stop-opacity=".05"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="400" fill="url(#g1)"/>
+          <!-- Valve illustration -->
+          <g stroke="#00a8e8" stroke-width="2" fill="none">
+            <!-- Body -->
+            <path d="M120 120 L280 120 L280 280 L240 280 L240 200 L160 200 L160 280 L120 280 Z" stroke-opacity=".6"/>
+            <!-- Flange top -->
+            <rect x="150" y="100" width="100" height="20" rx="3" stroke-opacity=".5"/>
+            <!-- Handwheel -->
+            <circle cx="200" cy="80" r="30" stroke-opacity=".8"/>
+            <line x1="170" y1="80" x2="230" y2="80" stroke-opacity=".4"/>
+            <line x1="200" y1="50" x2="200" y2="110" stroke-opacity=".4"/>
+            <!-- Stem -->
+            <line x1="200" y1="110" x2="200" y2="200" stroke-opacity=".6"/>
+            <!-- Pipe connections -->
+            <rect x="60" y="160" width="60" height="40" stroke-opacity=".3"/>
+            <rect x="280" y="160" width="60" height="40" stroke-opacity=".3"/>
+            <!-- Bolts on flanges -->
+            <circle cx="70" cy="170" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <circle cx="70" cy="180" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <circle cx="70" cy="190" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <circle cx="330" cy="170" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <circle cx="330" cy="180" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <circle cx="330" cy="190" r="3" fill="#00a8e8" stroke="none" opacity=".4"/>
+            <!-- Internal detail -->
+            <path d="M160 200 L200 160 L240 200" stroke-opacity=".3"/>
+            <!-- Labels -->
+          </g>
+          <text x="200" y="330" text-anchor="middle" fill="#5a6a85" font-size="11" font-family="monospace">CONTROL VALVE</text>
+          <text x="200" y="350" text-anchor="middle" fill="#00a8e8" font-size="14" font-family="monospace" font-weight="bold">LT-CV SERIES</text>
+          <!-- Grid lines -->
+          <g stroke="#1e2a47" stroke-width="1" opacity=".5">
+            <line x1="0" y1="100" x2="400" y2="100"/>
+            <line x1="0" y1="200" x2="400" y2="200"/>
+            <line x1="0" y1="300" x2="400" y2="300"/>
+            <line x1="100" y1="0" x2="100" y2="400"/>
+            <line x1="200" y1="0" x2="200" y2="400"/>
+            <line x1="300" y1="0" x2="300" y2="400"/>
+          </g>
+          <!-- Dimension lines -->
+          <g stroke="#5a6a85" stroke-width="1" stroke-dasharray="4 2">
+            <line x1="60" y1="240" x2="340" y2="240"/>
+            <line x1="60" y1="235" x2="60" y2="245"/>
+            <line x1="340" y1="235" x2="340" y2="245"/>
+          </g>
+          <text x="200" y="260" text-anchor="middle" fill="#5a6a85" font-size="9" font-family="monospace">DN 50 - DN 600</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Products ===== -->
+<section class="section products" id="products">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="products.title">产品中心</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" data-i18n="products.subtitle">涵盖工业阀门全系列，满足不同工况需求</p>
+    </div>
+    <div class="product-grid" id="productGrid">
+      <!-- Products will be rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== Capabilities ===== -->
+<section class="section capabilities" id="capabilities">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="cap.title">制造能力</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" data-i18n="cap.subtitle">先进的制造工艺与检测体系，确保每一台阀门的品质</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap-item">
+        <svg class="cap-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="10" width="28" height="28" rx="4" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 18h12M18 24h12M18 30h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="34" cy="34" r="6" stroke="currentColor" stroke-width="2"/>
+          <path d="M34 31v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <h4 data-i18n="cap.c1">精密加工</h4>
+        <p data-i18n="cap.c1d">CNC加工中心，确保尺寸精度</p>
+      </div>
+      <div class="cap-item">
+        <svg class="cap-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8L8 16v16l16 8 16-8V16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M8 16l16 8 16-8M24 24v16" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <h4 data-i18n="cap.c2">材料工程</h4>
+        <p data-i18n="cap.c2d">碳钢/不锈钢/合金钢多材质</p>
+      </div>
+      <div class="cap-item">
+        <svg class="cap-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/>
+          <path d="M24 12v12l8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M16 32l-4 4M32 32l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h4 data-i18n="cap.c3">压力测试</h4>
+        <p data-i18n="cap.c3d">壳体/密封/低压/高压全检</p>
+      </div>
+      <div class="cap-item">
+        <svg class="cap-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 14l-6 6 6 6M34 14l6 6-6 6M28 10l-8 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h4 data-i18n="cap.c4">定制研发</h4>
+        <p data-i18n="cap.c4d">按工况需求定制设计方案</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Certifications ===== -->
+<section class="section cert-section" id="certs">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="cert.title">资质与标准</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" data-i18n="cert.subtitle">严格遵循国际标准，品质有保障</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <svg class="cert-badge" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 28l6 6 10-12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h4>ISO 9001</h4>
+        <p data-i18n="cert.c1d">质量管理体系</p>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-badge" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="2"/>
+          <text x="28" y="33" text-anchor="middle" fill="currentColor" font-size="10" font-weight="bold">CE</text>
+        </svg>
+        <h4>CE</h4>
+        <p data-i18n="cert.c2d">欧盟符合性</p>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-badge" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 22h20M18 28h20M18 34h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h4>API</h4>
+        <p data-i18n="cert.c3d">美国石油学会标准</p>
+      </div>
+      <div class="cert-card">
+        <svg class="cert-badge" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="22" stroke="currentColor" stroke-width="2"/>
+          <path d="M20 20h16v16H20z" stroke="currentColor" stroke-width="2"/>
+          <path d="M24 28h8" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <h4 data-i18n="cert.c4">GB / DIN</h4>
+        <p data-i18n="cert.c4d">国标/德标</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" data-i18n="contact.title">联系我们</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" data-i18n="contact.subtitle">如有需求或咨询，欢迎随时联系</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 data-i18n="contact.info">联系方式</h3>
+        <div class="contact-list">
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <div>
+              <h4 data-i18n="contact.addr">公司地址</h4>
+              <p data-i18n="contact.addrV">深圳市宝安区 [具体地址待填]</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <h4 data-i18n="contact.email">电子邮箱</h4>
+              <p>sales@langtuovalve.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <div>
+              <h4 data-i18n="contact.phone">联系电话</h4>
+              <p>+86 755 [电话待填]</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <div>
+              <h4 data-i18n="contact.export">出口业务</h4>
+              <p data-i18n="contact.exportV">支持全球出口 · 贸易条款 FOB/CIF/EXW</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <form id="contactForm" onsubmit="return submitForm(event)">
+          <div class="form-group">
+            <label data-i18n="form.name">您的姓名 *</label>
+            <input type="text" class="form-input" id="formName" required>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.email">电子邮箱 *</label>
+            <input type="email" class="form-input" id="formEmail" required>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.company">公司名称</label>
+            <input type="text" class="form-input" id="formCompany">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.product">需求产品</label>
+            <input type="text" class="form-input" id="formProduct">
+          </div>
+          <div class="form-group">
+            <label data-i18n="form.message">需求描述 *</label>
+            <textarea class="form-input" id="formMessage" required></textarea>
+          </div>
+          <button type="submit" class="form-submit" data-i18n="form.submit">发送询盘</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="24" height="24" rx="6" fill="#00a8e8"/>
+            <path d="M12 14h12M12 18h12M12 22h12" stroke="#0a0f1a" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="2.5" fill="#0a0f1a"/>
+          </svg>
+          <span>LANGTUO<span style="color:var(--accent)"> VALVE</span></span>
+        </a>
+        <p data-i18n="footer.desc">深圳市朗拓阀门有限公司 — 面向全球工业客户的专业工业阀门供应链服务商。</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.products">产品</h5>
+        <a href="#products" data-i18n="footer.p1">调节阀</a>
+        <a href="#products" data-i18n="footer.p2">闸阀</a>
+        <a href="#products" data-i18n="footer.p3">球阀</a>
+        <a href="#products" data-i18n="footer.p4">蝶阀</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.company">公司</h5>
+        <a href="#about" data-i18n="footer.c1">关于我们</a>
+        <a href="#capabilities" data-i18n="footer.c2">制造能力</a>
+        <a href="#certs" data-i18n="footer.c3">资质标准</a>
+        <a href="#contact" data-i18n="footer.c4">联系我们</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Shenzhen Langtuo Valve Co., Ltd. <span data-i18n="footer.rights">All Rights Reserved.</span></p>
+      <p data-i18n="footer.addr">深圳市宝安区 · 深圳 · 中国</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== Memory Store (no localStorage/sessionStorage/cookie) ===== */
+var currentLang = 'zh';
+
+/* ===== i18n Data ===== */
+var i18n = {
+  zh: {
+    'nav.home': '首页',
+    'nav.about': '关于我们',
+    'nav.products': '产品中心',
+    'nav.capabilities': '制造能力',
+    'nav.contact': '联系我们',
+    'hero.tag': '专业工业阀门供应链服务商',
+    'hero.title': '为全球工业提供<span class="accent">精密阀门</span>解决方案',
+    'hero.desc': '深圳市朗拓阀门有限公司，是面向全球工业客户的专业工业阀门供应链服务商。依托珠三角成熟完善的供应链资源，为海外客户提供高品质阀门产品与一站式采购配套方案。',
+    'hero.cta1': '浏览产品',
+    'hero.cta2': '获取报价',
+    'hero.stat1': '年行业经验',
+    'hero.stat2': '产品型号',
+    'hero.stat3': '出口国家',
+    'hero.stat4': '质量认证',
+    'about.title': '关于朗拓',
+    'about.p1': '深圳市朗拓阀门有限公司，是面向全球工业客户的专业工业阀门供应链服务商。公司坐落于制造业重镇深圳，依托珠三角成熟完善的供应链资源，为海外客户提供高品质阀门产品与一站式采购配套方案。',
+    'about.p2': '我们执行严格的全链条质量监管，从原材料溯源到出货前检验层层把控。所有供应产品均按照 GB、ANSI、API、DIN、JIS 等国际标准生产，符合 ISO 9001 质量管理体系规范。',
+    'about.f1': '质量控制',
+    'about.f1d': 'ISO9001 标准品控监管',
+    'about.f2': '快速交期',
+    'about.f2d': '稳定供应链保障准时交付',
+    'about.f3': '定制方案',
+    'about.f3d': '阀门规格定制与配置配套',
+    'about.f4': '全球业务',
+    'about.f4d': '服务 30 多个国家和地区',
+    'products.title': '产品中心',
+    'products.subtitle': '涵盖工业阀门全系列，满足不同工况需求',
+    'cap.title': '制造能力',
+    'cap.subtitle': '先进的制造工艺与检测体系，确保每一台阀门的品质',
+    'cap.c1': '精密加工',
+    'cap.c1d': 'CNC加工中心，确保尺寸精度',
+    'cap.c2': '材料工程',
+    'cap.c2d': '碳钢/不锈钢/合金钢多材质',
+    'cap.c3': '压力测试',
+    'cap.c3d': '壳体/密封/低压/高压全检',
+    'cap.c4': '定制研发',
+    'cap.c4d': '按工况需求定制设计方案',
+    'cert.title': '资质与标准',
+    'cert.subtitle': '严格遵循国际标准，品质有保障',
+    'cert.c1d': '质量管理体系',
+    'cert.c2d': '欧盟符合性',
+    'cert.c3d': '美国石油学会标准',
+    'cert.c4': 'GB / DIN',
+    'cert.c4d': '国标/德标',
+    'contact.title': '联系我们',
+    'contact.subtitle': '如有需求或咨询，欢迎随时联系',
+    'contact.info': '联系方式',
+    'contact.addr': '公司地址',
+    'contact.addrV': '深圳市宝安区 [具体地址待填]',
+    'contact.email': '电子邮箱',
+    'contact.phone': '联系电话',
+    'contact.export': '出口业务',
+    'contact.exportV': '支持全球出口 · 贸易条款 FOB/CIF/EXW',
+    'form.name': '您的姓名 *',
+    'form.email': '电子邮箱 *',
+    'form.company': '公司名称',
+    'form.product': '需求产品',
+    'form.message': '需求描述 *',
+    'form.submit': '发送询盘',
+    'footer.desc': '深圳市朗拓阀门有限公司 — 面向全球工业客户的专业工业阀门供应链服务商。',
+    'footer.products': '产品',
+    'footer.p1': '调节阀',
+    'footer.p2': '闸阀',
+    'footer.p3': '球阀',
+    'footer.p4': '蝶阀',
+    'footer.company': '公司',
+    'footer.c1': '关于我们',
+    'footer.c2': '制造能力',
+    'footer.c3': '资质标准',
+    'footer.c4': '联系我们',
+    'footer.rights': '保留所有权利。',
+    'footer.addr': '深圳市宝安区 · 深圳 · 中国',
+    'form.success': '询盘已准备，正在打开邮件客户端...',
+    'form.errName': '请填写姓名',
+    'form.errEmail': '请填写有效邮箱',
+    'form.errMsg': '请填写需求描述',
+  },
+  en: {
+    'nav.home': 'Home',
+    'nav.about': 'About',
+    'nav.products': 'Products',
+    'nav.capabilities': 'Capabilities',
+    'nav.contact': 'Contact',
+    'hero.tag': 'Professional Valve Supply Chain Service Provider',
+    'hero.title': 'Precision <span class="accent">Valve Solutions</span> for Global Industry',
+    'hero.desc': 'Shenzhen Langtuo Valve Co., Ltd is a professional industrial valve supply chain service provider for global industrial customers. Leveraging the mature and comprehensive supply chain resources of the Pearl River Delta, we provide overseas customers with high-quality valve products and one-stop procurement solutions.',
+    'hero.cta1': 'View Products',
+    'hero.cta2': 'Get Quote',
+    'hero.stat1': 'Years Experience',
+    'hero.stat2': 'Product Models',
+    'hero.stat3': 'Export Countries',
+    'hero.stat4': 'Certified',
+    'about.title': 'About Langtuo',
+    'about.p1': 'Shenzhen Langtuo Valve Co., Ltd is a professional industrial valve supply chain service provider for global industrial customers. Located in Shenzhen, a major manufacturing hub, we leverage the mature and comprehensive supply chain resources of the Pearl River Delta to provide overseas customers with high-quality valve products and one-stop procurement solutions.',
+    'about.p2': 'We implement strict full-chain quality supervision, controlling every step from raw material traceability to pre-shipment inspection. All supplied products are manufactured in accordance with international standards such as GB, ANSI, API, DIN, and JIS, and comply with ISO 9001 quality management system standards.',
+    'about.f1': 'Quality Control',
+    'about.f1d': 'ISO 9001 standard quality control supervision',
+    'about.f2': 'Fast Delivery',
+    'about.f2d': 'Stable supply chain ensures on-time delivery',
+    'about.f3': 'Custom Solutions',
+    'about.f3d': 'Valve specification customization and configuration',
+    'about.f4': 'Global Business',
+    'about.f4d': 'Serving 30+ countries and regions',
+    'products.title': 'Products',
+    'products.subtitle': 'Complete range of industrial valves for diverse applications',
+    'cap.title': 'Manufacturing Capabilities',
+    'cap.subtitle': 'Advanced manufacturing processes and testing systems ensure the quality of every valve',
+    'cap.c1': 'Precision Machining',
+    'cap.c1d': 'CNC machining centers for dimensional accuracy',
+    'cap.c2': 'Material Engineering',
+    'cap.c2d': 'Carbon steel / stainless / alloy steel',
+    'cap.c3': 'Pressure Testing',
+    'cap.c3d': 'Shell / seal / low & high pressure tested',
+    'cap.c4': 'Custom R&D',
+    'cap.c4d': 'Bespoke design per application',
+    'cert.title': 'Certifications & Standards',
+    'cert.subtitle': 'Manufactured to international standards for guaranteed quality',
+    'cert.c1d': 'Quality Management System',
+    'cert.c2d': 'European Conformity',
+    'cert.c3d': 'American Petroleum Institute',
+    'cert.c4': 'GB / DIN',
+    'cert.c4d': 'Chinese / German Standards',
+    'contact.title': 'Contact Us',
+    'contact.subtitle': 'Feel free to reach out for inquiries and quotations',
+    'contact.info': 'Contact Information',
+    'contact.addr': 'Address',
+    'contact.addrV': 'Bao\'an District, Shenzhen [Address TBD]',
+    'contact.email': 'Email',
+    'contact.phone': 'Phone',
+    'contact.export': 'Export Business',
+    'contact.exportV': 'Worldwide export · FOB/CIF/EXW terms',
+    'form.name': 'Your Name *',
+    'form.email': 'Email *',
+    'form.company': 'Company',
+    'form.product': 'Product Required',
+    'form.message': 'Inquiry Details *',
+    'form.submit': 'Send Inquiry',
+    'footer.desc': 'Shenzhen Langtuo Valve Co., Ltd — Professional industrial valve supply chain service provider for global industrial customers.',
+    'footer.products': 'Products',
+    'footer.p1': 'Control Valves',
+    'footer.p2': 'Gate Valves',
+    'footer.p3': 'Ball Valves',
+    'footer.p4': 'Butterfly Valves',
+    'footer.company': 'Company',
+    'footer.c1': 'About Us',
+    'footer.c2': 'Capabilities',
+    'footer.c3': 'Certifications',
+    'footer.c4': 'Contact Us',
+    'footer.rights': 'All Rights Reserved.',
+    'footer.addr': 'Bao\'an District · Shenzhen · China',
+    'form.success': 'Inquiry prepared, opening email client...',
+    'form.errName': 'Please enter your name',
+    'form.errEmail': 'Please enter a valid email',
+    'form.errMsg': 'Please describe your requirements',
+  }
+};
+
+/* ===== Product Data ===== */
+var products = {
+  zh: [
+    {
+      name: '调节阀 / Control Valve',
+      desc: '用于精确调节管道中介质流量和压力，配备气动或电动执行机构，适用于高温高压工况。',
+      specs: ['DN15-DN600', 'PN16-PN320', 'Class150-2500'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 60 L150 60 L150 100 L130 100 L130 80 L70 80 L70 100 L50 100 Z" stroke-opacity=".6"/><rect x="90" y="40" width="20" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="30" r="20" stroke-opacity=".8"/><line x1="80" y1="30" x2="120" y2="30" stroke-opacity=".4"/><line x1="100" y1="10" x2="100" y2="50" stroke-opacity=".4"/><line x1="100" y1="50" x2="100" y2="80" stroke-opacity=".6"/><path d="M70 80 L100 55 L130 80" stroke-opacity=".3"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-CV</text>',
+      tag: '推荐'
+    },
+    {
+      name: '闸阀 / Gate Valve',
+      desc: '楔式闸板结构，全开时流阻极低，适用于截断工况，广泛应用于石油和天然气管线。',
+      specs: ['DN15-DN1200', 'PN16-PN64', 'Class150-400'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L130 105 L130 75 L70 75 L70 105 L50 105 Z" stroke-opacity=".6"/><rect x="88" y="35" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="22" r="18" stroke-opacity=".8"/><line x1="100" y1="40" x2="100" y2="75" stroke-opacity=".6"/><line x1="85" y1="55" x2="85" y2="75" stroke-width="2" stroke-opacity=".4"/><line x1="115" y1="55" x2="115" y2="75" stroke-width="2" stroke-opacity=".4"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-GV</text>',
+      tag: ''
+    },
+    {
+      name: '截止阀 / Globe Valve',
+      desc: '采用盘形阀瓣结构，密封性能优良，适合流量调节和截断，维修方便。',
+      specs: ['DN15-DN500', 'PN16-PN160', 'Class150-900'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L130 105 L130 75 L70 75 L70 105 L50 105 Z" stroke-opacity=".6"/><rect x="88" y="35" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="22" r="18" stroke-opacity=".8"/><line x1="100" y1="40" x2="100" y2="75" stroke-opacity=".6"/><path d="M70 75 Q100 50 130 75" stroke-opacity=".4"/><circle cx="100" cy="60" r="8" stroke-opacity=".5"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-GL</text>',
+      tag: ''
+    },
+    {
+      name: '球阀 / Ball Valve',
+      desc: '球体旋转90度实现开关，操作快捷，密封可靠，适合多种介质包括腐蚀性流体。',
+      specs: ['DN15-DN800', 'PN16-PN100', 'Class150-600'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 60 L150 60 L150 100 L50 100 Z" stroke-opacity=".6"/><rect x="88" y="40" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="27" r="18" stroke-opacity=".8"/><line x1="100" y1="45" x2="100" y2="80" stroke-opacity=".6"/><circle cx="100" cy="80" r="15" stroke-opacity=".5"/><line x1="85" y1="80" x2="115" y2="80" stroke-opacity=".3"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-BV</text>',
+      tag: ''
+    },
+    {
+      name: '蝶阀 / Butterfly Valve',
+      desc: '蝶板绕轴线旋转实现启闭，结构紧凑、重量轻，适合大口径低压工况。',
+      specs: ['DN50-DN3000', 'PN6-PN25', 'Class150'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><circle cx="100" cy="80" r="25" stroke-opacity=".5"/><rect x="88" y="40" width="24" height="20" rx="2" stroke-opacity=".5"/><line x1="100" y1="45" x2="100" y2="55" stroke-opacity=".6"/><circle cx="100" cy="22" r="15" stroke-opacity=".8"/><line x1="75" y1="80" x2="125" y2="80" stroke-width="3" stroke-opacity=".4"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-BF</text>',
+      tag: ''
+    },
+    {
+      name: '止回阀 / Check Valve',
+      desc: '自动防止介质倒流，保护管道和设备安全，有升降式、旋启式和对夹式等多种结构。',
+      specs: ['DN15-DN1200', 'PN16-PN160', 'Class150-900'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L50 105 Z" stroke-opacity=".6"/><path d="M75 55 Q100 75 125 55" stroke-opacity=".4"/><line x1="100" y1="55" x2="100" y2="105" stroke-opacity=".3" stroke-dasharray="3 2"/><circle cx="100" cy="75" r="10" stroke-opacity=".4"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-CV</text>',
+      tag: ''
+    }
+  ],
+  en: [
+    {
+      name: 'Control Valve',
+      desc: 'Designed for precise regulation of flow and pressure in pipelines. Available with pneumatic or electric actuators, suitable for high-temperature and high-pressure applications.',
+      specs: ['DN15-DN600', 'PN16-PN320', 'Class150-2500'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 60 L150 60 L150 100 L130 100 L130 80 L70 80 L70 100 L50 100 Z" stroke-opacity=".6"/><rect x="90" y="40" width="20" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="30" r="20" stroke-opacity=".8"/><line x1="80" y1="30" x2="120" y2="30" stroke-opacity=".4"/><line x1="100" y1="10" x2="100" y2="50" stroke-opacity=".4"/><line x1="100" y1="50" x2="100" y2="80" stroke-opacity=".6"/><path d="M70 80 L100 55 L130 80" stroke-opacity=".3"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-CV</text>',
+      tag: 'Featured'
+    },
+    {
+      name: 'Gate Valve',
+      desc: 'Wedge gate design with minimal flow resistance when fully open. Ideal for isolation in oil and gas pipelines.',
+      specs: ['DN15-DN1200', 'PN16-PN64', 'Class150-400'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L130 105 L130 75 L70 75 L70 105 L50 105 Z" stroke-opacity=".6"/><rect x="88" y="35" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="22" r="18" stroke-opacity=".8"/><line x1="100" y1="40" x2="100" y2="75" stroke-opacity=".6"/><line x1="85" y1="55" x2="85" y2="75" stroke-width="2" stroke-opacity=".4"/><line x1="115" y1="55" x2="115" y2="75" stroke-width="2" stroke-opacity=".4"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-GV</text>',
+      tag: ''
+    },
+    {
+      name: 'Globe Valve',
+      desc: 'Disc-type valve with excellent sealing performance. Suitable for flow regulation and isolation with easy maintenance.',
+      specs: ['DN15-DN500', 'PN16-PN160', 'Class150-900'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L130 105 L130 75 L70 75 L70 105 L50 105 Z" stroke-opacity=".6"/><rect x="88" y="35" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="22" r="18" stroke-opacity=".8"/><line x1="100" y1="40" x2="100" y2="75" stroke-opacity=".6"/><path d="M70 75 Q100 50 130 75" stroke-opacity=".4"/><circle cx="100" cy="60" r="8" stroke-opacity=".5"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-GL</text>',
+      tag: ''
+    },
+    {
+      name: 'Ball Valve',
+      desc: 'Quarter-turn operation with a ball disc for quick shutoff. Reliable sealing for various media including corrosive fluids.',
+      specs: ['DN15-DN800', 'PN16-PN100', 'Class150-600'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 60 L150 60 L150 100 L50 100 Z" stroke-opacity=".6"/><rect x="88" y="40" width="24" height="20" rx="2" stroke-opacity=".5"/><circle cx="100" cy="27" r="18" stroke-opacity=".8"/><line x1="100" y1="45" x2="100" y2="80" stroke-opacity=".6"/><circle cx="100" cy="80" r="15" stroke-opacity=".5"/><line x1="85" y1="80" x2="115" y2="80" stroke-opacity=".3"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-BV</text>',
+      tag: ''
+    },
+    {
+      name: 'Butterfly Valve',
+      desc: 'Compact and lightweight with a rotating disc. Ideal for large-diameter, low-pressure applications.',
+      specs: ['DN50-DN3000', 'PN6-PN25', 'Class150'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><circle cx="100" cy="80" r="25" stroke-opacity=".5"/><rect x="88" y="40" width="24" height="20" rx="2" stroke-opacity=".5"/><line x1="100" y1="45" x2="100" y2="55" stroke-opacity=".6"/><circle cx="100" cy="22" r="15" stroke-opacity=".8"/><line x1="75" y1="80" x2="125" y2="80" stroke-width="3" stroke-opacity=".4"/></g><text x="100" y="120" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-BF</text>',
+      tag: ''
+    },
+    {
+      name: 'Check Valve',
+      desc: 'Automatic backflow prevention to protect piping and equipment. Available in lift, swing, and wafer types.',
+      specs: ['DN15-DN1200', 'PN16-PN160', 'Class150-900'],
+      svg: '<g stroke="#00a8e8" stroke-width="1.5" fill="none"><path d="M50 55 L150 55 L150 105 L50 105 Z" stroke-opacity=".6"/><path d="M75 55 Q100 75 125 55" stroke-opacity=".4"/><line x1="100" y1="55" x2="100" y2="105" stroke-opacity=".3" stroke-dasharray="3 2"/><circle cx="100" cy="75" r="10" stroke-opacity=".4"/></g><text x="100" y="125" text-anchor="middle" fill="#5a6a85" font-size="8" font-family="monospace">LT-CV</text>',
+      tag: ''
+    }
+  ]
+};
+
+/* ===== Language Switching ===== */
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);
+  }
+  var elements = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key] !== undefined) {
+      el.innerHTML = i18n[lang][key];
+    }
+  }
+  renderProducts();
+}
+
+/* ===== Render Products ===== */
+function renderProducts() {
+  var grid = document.getElementById('productGrid');
+  var data = products[currentLang];
+  var html = '';
+  for (var i = 0; i < data.length; i++) {
+    var p = data[i];
+    var tagHtml = p.tag ? '<span class="product-tag">' + p.tag + '</span>' : '';
+    var specsHtml = '';
+    for (var j = 0; j < p.specs.length; j++) {
+      specsHtml += '<span class="product-spec">' + p.specs[j] + '</span>';
+    }
+    html += '<div class="product-card">' +
+      '<div class="product-img">' + tagHtml +
+        '<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">' + p.svg + '</svg>' +
+      '</div>' +
+      '<div class="product-body">' +
+        '<h3>' + p.name + '</h3>' +
+        '<p>' + p.desc + '</p>' +
+        '<div class="product-specs">' + specsHtml + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+  grid.innerHTML = html;
+}
+
+/* ===== Mobile Menu Toggle ===== */
+function toggleMenu() {
+  var nav = document.getElementById('nav');
+  nav.classList.toggle('open');
+}
+
+/* ===== Contact Form (mailto, no server) ===== */
+function submitForm(e) {
+  e.preventDefault();
+  var name = document.getElementById('formName').value.trim();
+  var email = document.getElementById('formEmail').value.trim();
+  var company = document.getElementById('formCompany').value.trim();
+  var product = document.getElementById('formProduct').value.trim();
+  var message = document.getElementById('formMessage').value.trim();
+  var t = i18n[currentLang];
+  
+  if (!name) { alertInline('formName', t['form.errName']); return false; }
+  if (!email || email.indexOf('@') === -1) { alertInline('formEmail', t['form.errEmail']); return false; }
+  if (!message) { alertInline('formMessage', t['form.errMsg']); return false; }
+  
+  var subject = (currentLang === 'zh' ? '询盘 - ' : 'Inquiry - ') + name;
+  var body = (currentLang === 'zh' ? '姓名' : 'Name') + ': ' + name + '\n' +
+             (currentLang === 'zh' ? '邮箱' : 'Email') + ': ' + email + '\n' +
+             (currentLang === 'zh' ? '公司' : 'Company') + ': ' + (company || '-') + '\n' +
+             (currentLang === 'zh' ? '需求产品' : 'Product') + ': ' + (product || '-') + '\n' +
+             (currentLang === 'zh' ? '需求描述' : 'Details') + ': ' + message;
+  
+  var mailto = 'mailto:sales@langtuovalve.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  window.location.href = mailto;
+  return false;
+}
+
+function alertInline(fieldId, msg) {
+  var field = document.getElementById(fieldId);
+  field.style.borderColor = '#e74c3c';
+  field.focus();
+  setTimeout(function() { field.style.borderColor = ''; }, 3000);
+}
+
+/* ===== Init ===== */
+renderProducts();
+
+/* Close mobile menu on nav click */
+var navLinks = document.querySelectorAll('.nav a');
+for (var i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener('click', function() {
+    document.getElementById('nav').classList.remove('open');
+  });
+}
+
+/* Header scroll effect */
+window.addEventListener('scroll', function() {
+  var header = document.getElementById('header');
+  if (window.scrollY > 60) {
+    header.style.height = '56px';
+  } else {
+    header.style.height = '64px';
+  }
+});
+</script>
+
+</body>
+</html>
