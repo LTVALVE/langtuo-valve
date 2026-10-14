@@ -1835,6 +1835,24 @@ textarea.form-input{resize:vertical;min-height:120px}
   .lightbox-close{width:38px;height:38px;font-size:17px;top:10px;right:10px}
 .lightbox-zoom-toggle{width:38px;height:38px;font-size:15px;top:10px;left:10px}
 }
+/* ===== About Product Grid (latest override) ===== */
+.about-visual{
+  position:relative;max-width:560px;margin:0 auto;
+  border-radius:var(--radius-lg);overflow:hidden;
+  background:linear-gradient(135deg,var(--bg-card) 0%,var(--bg-secondary) 100%);
+  border:1px solid var(--border);
+}
+.about-prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.about-prod{margin:0;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition)}
+.about-prod:hover{border-color:var(--accent);transform:translateY(-2px);box-shadow:var(--shadow)}
+.about-prod img{width:100%;height:150px;object-fit:contain;padding:10px;background:#fff;display:block}
+.about-prod figcaption{padding:10px 12px;text-align:center}
+.about-prod figcaption span{display:block;font-size:.85rem;font-weight:600;color:var(--text-primary)}
+.about-prod figcaption em{display:block;font-style:normal;font-size:.7rem;color:var(--text-muted);margin-top:4px;line-height:1.4}
+@media(max-width:640px){
+  .about-prod-grid{grid-template-columns:1fr 1fr}
+  .about-prod img{height:120px}
+}
 </style>
 
 <script>
@@ -1972,8 +1990,21 @@ var _hmt = _hmt || [];
           </div>
         </div>
       </div>
-      <div class="about-visual">
-        <img src="images/factory_17.jpg" alt="Langtuo Valve Factory" loading="lazy" />
+<div class="about-visual">
+        <div class="about-prod-grid">
+          <figure class="about-prod">
+            <img src="images/自力式压力调节阀.jpg" alt="自力式压力调节阀" loading="lazy" />
+            <figcaption><span data-i18n="about.pv1">自力式压力调节阀</span><em>Self-operated Pressure Regulating Valve</em></figcaption>
+          </figure>
+          <figure class="about-prod">
+            <img src="images/电动V型球阀.jpg" alt="电动V型球阀" loading="lazy" />
+            <figcaption><span data-i18n="about.pv2">电动V型球阀</span><em>Electric V-type Ball Valve</em></figcaption>
+          </figure>
+          <figure class="about-prod">
+            <img src="images/铸钢手动截止阀.jpg" alt="铸钢手动截止阀" loading="lazy" />
+            <figcaption><span data-i18n="about.pv3">铸钢手动截止阀</span><em>Cast Steel Manual Globe Valve</em></figcaption>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
@@ -2241,8 +2272,11 @@ var i18n = {
     'about.f2d': '稳定供应链保障准时交付',
     'about.f3': '定制方案',
     'about.f3d': '阀门规格定制与配置配套',
-    'about.f4': '全球业务',
+'about.f4': '全球业务',
     'about.f4d': '服务 30 多个国家和地区',
+    'about.pv1': '自力式压力调节阀',
+    'about.pv2': '电动V型球阀',
+    'about.pv3': '铸钢手动截止阀',
     'products.title': '产品中心',
     'products.subtitle': '涵盖工业阀门全系列，满足不同工况需求',
     'cap.title': '品控与供应链',
@@ -2325,8 +2359,11 @@ var i18n = {
     'about.f2d': 'Stable supply chain ensures on-time delivery',
     'about.f3': 'Custom Solutions',
     'about.f3d': 'Valve specification customization and configuration',
-    'about.f4': 'Global Business',
+'about.f4': 'Global Business',
     'about.f4d': 'Serving 30+ countries and regions',
+    'about.pv1': 'Self-operated Pressure Regulating Valve',
+    'about.pv2': 'Electric V-type Ball Valve',
+    'about.pv3': 'Cast Steel Manual Globe Valve',
     'products.title': 'Products',
     'products.subtitle': 'Complete range of industrial valves for diverse applications',
     'cap.title': 'Quality & Supply Chain',
