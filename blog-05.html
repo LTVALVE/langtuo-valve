@@ -115,6 +115,9 @@ a{color:inherit;text-decoration:none}
 .lang-btn{background:none;border:none;cursor:pointer;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--text-secondary);border-radius:16px;transition:var(--transition)}
 .lang-btn.active{background:var(--accent);color:#fff}
 .lang-toggle{display:flex;align-items:center;gap:4px;margin-right:12px}
+.post-en{display:none}
+body.lang-en .post-zh{display:none}
+body.lang-en .post-en{display:block}
 </style>
 </head>
 <body>
@@ -153,17 +156,18 @@ a{color:inherit;text-decoration:none}
 
   <section class="post-hero">
     <div class="container">
-      <h1>电动阀门与气动阀门：东南亚工厂自动化升级选型指南</h1>
+      <h1 data-i18n="post.title">电动阀门与气动阀门：东南亚工厂自动化升级选型指南</h1>
       <div class="post-meta">
         <span>&#128197; 2026-10-13</span>
         <span>&#128101; 朗拓阀门技术团队</span>
-        <span>&#128278; 执行器 · 自动化</span>
+        <span data-i18n="post.cat">&#128278; 执行器 · 自动化</span>
       </div>
     </div>
   </section>
 
   <section class="post-body">
     <div class="post-content">
+      <div class="post-zh">
       <p>东南亚制造业自动化率正以年均约 <strong>12%</strong> 的速度提升，水处理厂、石化装置、食品饮料工厂纷纷将手动阀门升级为<strong>电动（Electric）</strong>或<strong>气动（Pneumatic）</strong>执行机构。两类驱动方式各有边界，选型错误会直接影响控制精度、防爆安全与运维成本。本文用一张对比表加一张决策矩阵，帮您快速定位。</p>
 
       <h2>1. 电动 vs 气动：核心差异 <span class="en">Electric vs Pneumatic</span></h2>
@@ -221,18 +225,76 @@ a{color:inherit;text-decoration:none}
       <div class="en-summary">
         <h3>&#127760; English Summary</h3>
         <p>Pneumatic actuators win on millisecond response and explosion-proof simplicity for refineries, while electric actuators offer higher positioning accuracy (±0.5%), low maintenance and easy bus communication for water treatment and HVAC. The deciding factors are torque safety factor (1.5x), failure-safe mode, IP rating for tropical humidity, and DCS/PLC signal compatibility.</p>
-        <p>Langtuo Valve supplies matched electric and pneumatic actuators with pre-tested torque calibration, along with smart positioners, solenoid valves and limit switches, deliverable as one package across Southeast Asia.</p>
+        <p>Langtuo Valve supplies matched electric and pneumatic actuators with pre-tested torque calibration, along with smart positioners, solenoid valves and limit switches, available as one complete package on FOB Shenzhen terms.</p>
+      </div>
+
+      </div>
+
+      <div class="post-en">
+        <p>Automation in Southeast Asian manufacturing is growing at about <strong>12% per year</strong>, and water treatment plants, petrochemical units and food &amp; beverage factories are upgrading manual valves to <strong>electric</strong> or <strong>pneumatic</strong> actuators. The two drive types have different boundaries; a wrong choice directly affects control accuracy, explosion safety and maintenance costs. This article uses one comparison table and one decision matrix to help you decide quickly.</p>
+
+      <h2>1. Electric vs Pneumatic: Core Differences</h2>
+      <table>
+        <tr><th>Dimension</th><th>Electric Actuator</th><th>Pneumatic Actuator</th></tr>
+        <tr><td>Response speed</td><td>Seconds, good for throttling</td><td>Milliseconds, very fast on-off</td></tr>
+        <tr><td>Control accuracy</td><td>High (positioning up to ±0.5%)</td><td>Medium (depends on positioner and air pressure stability)</td></tr>
+        <tr><td>Drive energy</td><td>Single/three-phase power</td><td>Compressed air (requires air supply system)</td></tr>
+        <tr><td>Explosion protection</td><td>Available as Ex d / Ex mb types</td><td>Intrinsically safe, easy to make explosion-proof</td></tr>
+        <tr><td>Loss-of-power/air protection</td><td>Needs UPS or spring return</td><td>Spring return / air receiver achieve fail-safe</td></tr>
+        <tr><td>Smart communication</td><td>MODBUS / PROFIBUS / Ethernet</td><td>Connectable to fieldbus via smart positioner</td></tr>
+        <tr><td>Maintenance cost</td><td>Low (no air accessories)</td><td>Medium (filters, dryers need servicing)</td></tr>
+      </table>
+
+      <h2>2. Industry Decision Matrix</h2>
+      <table>
+        <tr><th>Industry</th><th>Recommended</th><th>Reason</th></tr>
+        <tr><td>Water treatment (pump stations/dosing)</td><td>Electric ball/butterfly valves</td><td>Convenient power, high accuracy, no air dependence</td></tr>
+        <tr><td>Petrochemical refineries</td><td>Pneumatic + smart positioner</td><td>Fast response, mature explosion-proof, fail-safe on air loss</td></tr>
+        <tr><td>Food &amp; beverage (CIP/SIP)</td><td>Pneumatic hygienic valves</td><td>Fast switching, hygienic design, centralized control</td></tr>
+        <tr><td>Power plants / boilers</td><td>Electric (handwheel + torque protection)</td><td>Large bore, high torque, long inspection intervals</td></tr>
+        <tr><td>Building HVAC</td><td>Small electric-actuated valves</td><td>Low noise, no air source, low cost</td></tr>
+      </table>
+
+      <h2>3. Key Selection Parameters</h2>
+      <h3>3.1 Torque Matching</h3>
+      <p>Actuator output torque should be ≥ <strong>1.5×</strong> the valve's required torque (safety factor). Estimation: T = stem torque (from size and differential pressure tables) × safety factor. Insufficient torque is the No.1 cause of valves failing to close fully.</p>
+      <h3>3.2 Explosion Protection and Enclosure Rating</h3>
+      <ul>
+        <li>Petrochemical hazardous areas: <strong>Ex d IIC T4/T6</strong> or <strong>Ex mb</strong> explosion-proof electric heads</li>
+        <li>Outdoor hot-humid environment: enclosure ≥ <strong>IP65</strong>, IP67/IP68 recommended</li>
+        <li>Coastal salt-spray: marine-grade coating or 316L enclosure</li>
+      </ul>
+      <h3>3.3 Communication and Control</h3>
+      <ul>
+        <li>For DCS/PLC integration, confirm signal type (4–20mA, discrete, Modbus RTU, PROFIBUS DP)</li>
+        <li>For centralized multi-valve management, prefer intelligent actuators with fieldbus support</li>
+        <li>For remote monitoring, choose models with status feedback and fault diagnosis</li>
+      </ul>
+
+      <h2>4. Common Pitfalls</h2>
+      <ul>
+        <li>Ignoring the failure-safe mode: specifying "close on power loss" but fitting a "hold position on power loss" actuator</li>
+        <li>Pneumatic systems without filter-regulator, so water in compressed air corrodes the seat</li>
+        <li>Electric heads with insufficient IP rating, damaged by rainwater in the rainy season</li>
+        <li>Sizing actuators by valve bore only, ignoring the effect of differential pressure on torque</li>
+      </ul>
+      <blockquote>
+        <p>Rule of thumb: <strong>hazardous area, millisecond cut-off needed, air already available → pneumatic; accuracy first, no air source, fewer maintenance staff → electric.</strong></p>
+      </blockquote>
+
+      <h2>5. Langtuo Automation Support</h2>
+      <p>Langtuo Valve provides complete actuator packages including <strong>electric actuators (explosion-proof types available), pneumatic actuators (single/double acting), solenoid valves, limit switches and smart positioners</strong>, with factory pre-tested actuator-valve matching and torque testing, customization for DCS/PLC signals, one-package supply and fewer on-site commissioning failures. For Southeast Asian plant retrofit projects we also provide selection sheets and installation guidance.</p>
       </div>
 
       <div class="post-cta">
-        <h3>准备实施自动化改造？</h3>
-        <p>提供阀门清单与气源/电源条件，我们出配套方案与报价。</p>
-        <a href="contact.html" class="btn">联系我们 &#8594;</a>
+        <h3 data-i18n="post.ctaTitle">准备实施自动化改造？</h3>
+        <p data-i18n="post.ctaText">提供阀门清单与气源/电源条件，我们出配套方案与报价。</p>
+        <a href="contact.html" class="btn" data-i18n="post.ctaBtn">联系我们 &#8594;</a>
       </div>
 
       <nav class="post-nav">
-        <a href="blog-04.html" class="next">&larr; 上一篇：RCEP关税优化</a>
-        <a href="blog.html" class="next">返回博客列表 &#8594;</a>
+        <a href="blog-04.html" class="next" data-i18n="post.prev">&larr; 上一篇：RCEP关税优化</a>
+        <a href="blog.html" class="next" data-i18n="post.next">返回博客列表 &#8594;</a>
       </nav>
     </div>
   </section>
@@ -304,7 +366,14 @@ var i18n = {
     'footer.c3':'选型须知','footer.c4':'联系我们','footer.resources':'资源','footer.blog':'技术博客',
     'footer.guide':'选型指南','footer.quote':'获取报价',
     'breadcrumb.home':'首页','breadcrumb.blog':'技术博客','breadcrumb.current':'本篇',
-    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例'
+    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例',
+    'post.title':'电动阀门与气动阀门：东南亚工厂自动化升级选型指南',
+    'post.cat':'🛠 执行器 · 自动化',
+    'post.ctaTitle':'准备实施自动化改造？',
+    'post.ctaText':'提供阀门清单与气源/电源条件，我们出配套方案与报价。',
+    'post.ctaBtn':'联系我们 →',
+    'post.prev':'← 上一篇：RCEP关税优化',
+    'post.next':'返回博客列表 →',
   },
   en: {
     'nav.home':'Home','nav.about':'About','nav.products':'Products','nav.selection':'Selection Guide',
@@ -314,11 +383,19 @@ var i18n = {
     'footer.c3':'Selection Guide','footer.c4':'Contact Us','footer.resources':'Resources','footer.blog':'Blog',
     'footer.guide':'Selection Guide','footer.quote':'Get Quote',
     'breadcrumb.home':'Home','breadcrumb.blog':'Blog','breadcrumb.current':'Current',
-    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia'
+    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia',
+    'post.title':'Electric vs Pneumatic Valves: Selection Guide for Factory Automation Upgrades in Southeast Asia',
+    'post.cat':'🛠 Actuators · Automation',
+    'post.ctaTitle':'Planning an automation upgrade?',
+    'post.ctaText':'Send us the valve list and air/power supply conditions for a matched solution and quotation.',
+    'post.ctaBtn':'Contact Us →',
+    'post.prev':'← Previous: RCEP Tariff Optimization',
+    'post.next':'Back to Blog →',
   }
 };
 function switchLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.body.classList.toggle('lang-en', lang === 'en');
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
     btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);

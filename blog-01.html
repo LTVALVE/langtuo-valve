@@ -115,6 +115,9 @@ a{color:inherit;text-decoration:none}
 .lang-btn{background:none;border:none;cursor:pointer;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--text-secondary);border-radius:16px;transition:var(--transition)}
 .lang-btn.active{background:var(--accent);color:#fff}
 .lang-toggle{display:flex;align-items:center;gap:4px;margin-right:12px}
+.post-en{display:none}
+body.lang-en .post-zh{display:none}
+body.lang-en .post-en{display:block}
 </style>
 </head>
 <body>
@@ -153,17 +156,18 @@ a{color:inherit;text-decoration:none}
 
   <section class="post-hero">
     <div class="container">
-      <h1>东南亚工业阀门采购完全指南：如何为炼化、水处理项目选对阀门</h1>
+      <h1 data-i18n="post.title">东南亚工业阀门采购完全指南：如何为炼化、水处理项目选对阀门</h1>
       <div class="post-meta">
         <span>&#128197; 2026-10-13</span>
         <span>&#128101; 朗拓阀门技术团队</span>
-        <span>&#128278; 阀门选型 · 采购指南</span>
+        <span data-i18n="post.cat">&#128278; 阀门选型 · 采购指南</span>
       </div>
     </div>
   </section>
 
   <section class="post-body">
     <div class="post-content">
+      <div class="post-zh">
       <p>东南亚正在成为全球工业阀门需求增长最快的区域之一。据 2025 年贸易数据，东南亚工业阀门进口总额约 <strong>21.7 亿美元</strong>，其中来自中国的供应占比高达 <strong>44.3%</strong>，中国已是该地区第一大阀门来源国。越南、印尼、泰国三个市场合计约占区域需求的 47%。对当地项目采购工程师来说，理解各类阀门的适用边界，是控制项目成本与安全风险的第一步。</p>
 
       <h2>1. 五大基础阀型对比 <span class="en">Five Basic Valve Types</span></h2>
@@ -199,28 +203,74 @@ a{color:inherit;text-decoration:none}
         <li>产品是否满足项目指定的 <strong>API / ANSI / GB</strong> 标准？</li>
         <li>能否提供完整材质证明书（MTC）与压力测试报告？</li>
         <li>批量订单前是否支持样品压力与密封测试？</li>
-        <li>深圳港口到越南、印尼、泰国主要港口的发货周期是否适配项目节点？</li>
+        <li>FOB 深圳港出货后，海运交期是否适配项目节点？（海运段由买方或其货代安排）</li>
         <li>是否提供安装指导、备件清单与中文/英文技术文档？</li>
       </ul>
 
       <h2>5. 为什么选择朗拓阀门 <span class="en">Why Choose Langtuo</span></h2>
-      <p>深圳市朗拓阀门有限公司深耕工业阀门出口多年，产品通过 <strong>ISO 9001</strong> 认证，常备 WCB / CF8 / CF8M 材质库存，深圳仓库直发东南亚主要港口，交期可控、品类齐全，支持按项目图纸定制。无论是炼化装置扩建还是水处理厂升级，朗拓都能提供从选型咨询到样品测试的一站式支持。</p>
+      <p>深圳市朗拓阀门有限公司深耕工业阀门出口多年，产品通过 <strong>ISO 9001</strong> 认证，常备 WCB / CF8 / CF8M 材质库存，深圳仓库现货，支持 FOB 深圳港出货，交期可控、品类齐全，支持按项目图纸定制。无论是炼化装置扩建还是水处理厂升级，朗拓都能提供从选型咨询到样品测试的一站式支持。</p>
 
       <div class="en-summary">
         <h3>&#127760; English Summary</h3>
         <p>Southeast Asia now imports USD 2.17 billion worth of industrial valves annually, and China supplies 44.3% of that demand. This guide compares ball, gate, butterfly, globe and check valves across refinery and water treatment applications, explains WCB / CF8 / CF8M material selection, and provides a practical vendor checklist covering ISO 9001 certification, API/ANSI standard compliance, material test certificates and shipping lead times.</p>
-        <p>Shenzhen Langtuo Valve Co., Ltd. supplies ISO 9001 certified industrial valves from Shenzhen warehouse to major Southeast Asia ports with stable lead times and OEM customization.</p>
+        <p>Shenzhen Langtuo Valve Co., Ltd. supplies ISO 9001 certified industrial valves from Shenzhen warehouse, supports FOB Shenzhen dispatch with stable lead times and offers OEM customization.</p>
+      </div>
+
+      </div>
+
+      <div class="post-en">
+        <p>Southeast Asia is becoming one of the fastest-growing regions for industrial valve demand. According to 2025 trade data, total industrial valve imports in the region reached approximately <strong>USD 2.17 billion</strong>, with China supplying as much as <strong>44.3%</strong> of that demand — making China the region's largest source country. Vietnam, Indonesia and Thailand together account for about 47% of regional demand. For project procurement engineers, understanding the application boundaries of each valve type is the first step to controlling project cost and safety risk.</p>
+
+      <h2>1. Five Basic Valve Types Compared</h2>
+      <p>In industrial piping systems, <strong>ball valves, gate valves, butterfly valves, globe valves and check valves</strong> handle over 90% of isolation and throttling functions. The trade-offs depend on media, pressure, pipe size and actuation frequency.</p>
+      <table>
+        <tr><th>Valve Type</th><th>Core Advantage</th><th>Typical Applications</th></tr>
+        <tr><td>Ball Valve</td><td>Fast operation, reliable sealing, low flow resistance</td><td>Refinery line isolation, water treatment main and branch shut-off</td></tr>
+        <tr><td>Gate Valve</td><td>Minimal flow resistance when fully open, long service life</td><td>Large-bore main lines, fully-open/fully-closed service</td></tr>
+        <tr><td>Butterfly Valve</td><td>Compact, lightweight, low torque</td><td>Large-diameter water treatment, cooling water circulation</td></tr>
+        <tr><td>Globe Valve</td><td>Low seat wear, ideal for frequent throttling</td><td>Instrument and sampling lines, flow regulation</td></tr>
+        <tr><td>Check Valve</td><td>Automatic backflow prevention, protects pumps and compressors</td><td>Pump discharge, compressor lines, drainage systems</td></tr>
+      </table>
+
+      <h2>2. Refinery Project Selection Logic</h2>
+      <h3>2.1 Pressure and Temperature Ratings</h3>
+      <p>Refinery units involve high-temperature, high-pressure media. Valve pressure classes should start from <strong>Class 150, with most critical points in the Class 300–900 range</strong>. For steam and hot-oil service above 200°C, pay special attention to the temperature limits of both body and seat materials.</p>
+      <h3>2.2 Governing Standards</h3>
+      <p>Refinery and petrochemical projects across Southeast Asia commonly require compliance with <strong>API 6D, API 600, API 602 or ASME B16.34</strong>. Buyers should require suppliers to ship with material test certificates (MTC) and third-party inspection reports to avoid acceptance delays on site due to missing documents.</p>
+      <h3>2.3 Body Materials</h3>
+      <ul>
+        <li><strong>WCB carbon steel</strong>: best value for general oil, steam and gas lines</li>
+        <li><strong>CF8 (304 stainless steel)</strong>: general chemical and mildly corrosive media</li>
+        <li><strong>CF8M (316 stainless steel)</strong>: chloride-bearing seawater, acidic and strongly corrosive service</li>
+      </ul>
+
+      <h2>3. Water Treatment Project Selection Logic</h2>
+      <p>Inlet and outlet lines of municipal and industrial water treatment plants are often <strong>above DN300</strong>. Here <strong>butterfly valves</strong> become the preferred choice for large-bore sections thanks to their compact size, light weight and low actuation torque; <strong>gate valves</strong> are commonly used on trunk lines that do not require frequent operation, to keep flow resistance low.</p>
+      <p>Because Southeast Asia is hot, humid and coastal with salt spray, discs and seats are recommended as <strong>EPDM/NBR lined with CF8/CF8M stainless steel stems</strong>, balancing corrosion resistance and sealing life. Moisture-proof and marine packing should also be included in procurement requirements.</p>
+
+      <h2>4. Vendor Procurement Checklist</h2>
+      <ul>
+        <li>Does the supplier hold <strong>ISO 9001</strong> quality management certification?</li>
+        <li>Do products meet the project-specified <strong>API / ANSI / GB</strong> standards?</li>
+        <li>Can the supplier provide complete material test certificates (MTC) and pressure test reports?</li>
+        <li>Are sample pressure and seat leakage tests supported before batch orders?</li>
+        <li>After FOB Shenzhen dispatch, does the ocean lead time fit the project schedule? (Ocean freight is arranged by the buyer or their forwarder.)</li>
+        <li>Are installation guidance, spare parts lists and bilingual English/Chinese technical documents provided?</li>
+      </ul>
+
+      <h2>5. Why Choose Langtuo</h2>
+      <p>Shenzhen Langtuo Valve Co., Ltd. has years of experience in industrial valve export. Products are <strong>ISO 9001</strong> certified, with regular WCB / CF8 / CF8M stock in the Shenzhen warehouse, FOB Shenzhen dispatch, controllable lead times, wide product coverage and customization to project drawings. Whether it is refinery expansion or water treatment plant upgrades, Langtuo provides one-stop support from selection consulting to sample testing.</p>
       </div>
 
       <div class="post-cta">
-        <h3>需要针对具体项目选型？</h3>
-        <p>我们的技术团队可免费提供阀型推荐与报价清单。</p>
-        <a href="contact.html" class="btn">联系我们 &#8594;</a>
+        <h3 data-i18n="post.ctaTitle">需要针对具体项目选型？</h3>
+        <p data-i18n="post.ctaText">我们的技术团队可免费提供阀型推荐与报价清单。</p>
+        <a href="contact.html" class="btn" data-i18n="post.ctaBtn">联系我们 &#8594;</a>
       </div>
 
       <nav class="post-nav">
-        <a href="blog.html" class="next">&larr; 返回博客列表</a>
-        <a href="blog-02.html" class="next">下一篇：球阀 vs 蝶阀 &#8594;</a>
+        <a href="blog.html" class="next" data-i18n="post.prev">&larr; 返回博客列表</a>
+        <a href="blog-02.html" class="next" data-i18n="post.next">下一篇：球阀 vs 蝶阀 &#8594;</a>
       </nav>
     </div>
   </section>
@@ -292,7 +342,14 @@ var i18n = {
     'footer.c3':'选型须知','footer.c4':'联系我们','footer.resources':'资源','footer.blog':'技术博客',
     'footer.guide':'选型指南','footer.quote':'获取报价',
     'breadcrumb.home':'首页','breadcrumb.blog':'技术博客','breadcrumb.current':'本篇',
-    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例'
+    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例',
+    'post.title':'东南亚工业阀门采购完全指南：如何为炼化、水处理项目选对阀门',
+    'post.cat':'🛠 阀门选型 · 采购指南',
+    'post.ctaTitle':'需要针对具体项目选型？',
+    'post.ctaText':'我们的技术团队可免费提供阀型推荐与报价清单。',
+    'post.ctaBtn':'联系我们 →',
+    'post.prev':'← 返回博客列表',
+    'post.next':'下一篇：球阀 vs 蝶阀 →',
   },
   en: {
     'nav.home':'Home','nav.about':'About','nav.products':'Products','nav.selection':'Selection Guide',
@@ -302,11 +359,19 @@ var i18n = {
     'footer.c3':'Selection Guide','footer.c4':'Contact Us','footer.resources':'Resources','footer.blog':'Blog',
     'footer.guide':'Selection Guide','footer.quote':'Get Quote',
     'breadcrumb.home':'Home','breadcrumb.blog':'Blog','breadcrumb.current':'Current',
-    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia'
+    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia',
+    'post.title':'The Complete Guide to Industrial Valve Procurement in Southeast Asia: Choosing the Right Valves for Refinery & Water Treatment Projects',
+    'post.cat':'🛠 Valve Selection · Buying Guide',
+    'post.ctaTitle':'Need project-specific valve selection?',
+    'post.ctaText':'Our technical team offers free valve recommendations and quotation lists.',
+    'post.ctaBtn':'Contact Us →',
+    'post.prev':'← Back to Blog',
+    'post.next':'Next: Ball vs Butterfly Valves →',
   }
 };
 function switchLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.body.classList.toggle('lang-en', lang === 'en');
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
     btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);

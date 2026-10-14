@@ -115,6 +115,9 @@ a{color:inherit;text-decoration:none}
 .lang-btn{background:none;border:none;cursor:pointer;padding:6px 14px;font-size:.82rem;font-weight:600;color:var(--text-secondary);border-radius:16px;transition:var(--transition)}
 .lang-btn.active{background:var(--accent);color:#fff}
 .lang-toggle{display:flex;align-items:center;gap:4px;margin-right:12px}
+.post-en{display:none}
+body.lang-en .post-zh{display:none}
+body.lang-en .post-en{display:block}
 </style>
 </head>
 <body>
@@ -153,17 +156,18 @@ a{color:inherit;text-decoration:none}
 
   <section class="post-hero">
     <div class="container">
-      <h1>越南/印尼炼化项目阀门选型：高压高温工况下的材料与标准选择</h1>
+      <h1 data-i18n="post.title">越南/印尼炼化项目阀门选型：高压高温工况下的材料与标准选择</h1>
       <div class="post-meta">
         <span>&#128197; 2026-10-13</span>
         <span>&#128101; 朗拓阀门技术团队</span>
-        <span>&#128278; 炼化项目 · 高压高温</span>
+        <span data-i18n="post.cat">&#128278; 炼化项目 · 高压高温</span>
       </div>
     </div>
   </section>
 
   <section class="post-body">
     <div class="post-content">
+      <div class="post-zh">
       <p>随着越南、印尼持续推进炼化产能扩张（区域新增炼油能力约 <strong>120 万桶/日</strong>），一批常减压、催化裂化、加氢精制装置进入设备采购高峰。炼化装置用阀门长期处于 <strong>高温（200–550°C）、高压（Class 300–900）</strong>甚至含硫化氢的腐蚀性工况，对材料、密封与标准的要求远超通用工业阀门。本文为项目采购工程师梳理关键选型决策点。</p>
 
       <h2>1. 压力等级与温度工况 <span class="en">Pressure Class &amp; Temperature</span></h2>
@@ -221,18 +225,76 @@ a{color:inherit;text-decoration:none}
       <div class="en-summary">
         <h3>&#127760; English Summary</h3>
         <p>Refinery expansion in Vietnam and Indonesia (about 1.2 million bpd of new capacity) is driving demand for Class 300–900 valves operating at 200–550°C. This article covers pressure-temperature rating per ASME B16.34, body material selection (WCB, WC6/WC9, CF8/CF8M, LCB), NACE MR0175 compliance for sour service, and API/ASME/GB standard equivalents, plus zero-leakage sealing levels (ISO 5208 Rate A) and fire-safe design per API 607.</p>
-        <p>Langtuo Valve offers API 6D designs, third-party inspection support, and 7–14 day shipping to Ho Chi Minh City and Jakarta ports.</p>
+        <p>Langtuo Valve offers API 6D designs and third-party inspection support, with goods available ex-works from our production lines and dispatched on FOB Shenzhen terms.</p>
+      </div>
+
+      </div>
+
+      <div class="post-en">
+        <p>As Vietnam and Indonesia continue expanding refining capacity (about <strong>1.2 million bpd of new regional capacity</strong>), a wave of crude distillation, catalytic cracking and hydrotreating units has entered the equipment procurement peak. Refinery valves operate under long-term <strong>high temperature (200–550°C), high pressure (Class 300–900)</strong> and even corrosive hydrogen-sulfide service, with requirements for material, sealing and standards far beyond general-purpose industrial valves. This article maps the key selection decisions for project procurement engineers.</p>
+
+      <h2>1. Pressure Class and Temperature Duty</h2>
+      <table>
+        <tr><th>Unit Area</th><th>Common Pressure Class</th><th>Typical Temperature</th><th>Recommended Type</th></tr>
+        <tr><td>Crude distillation (CDU)</td><td>Class 150–300</td><td>≤ 370°C</td><td>Gate, ball</td></tr>
+        <tr><td>Hydrotreating / FCC</td><td>Class 600–900</td><td>350–550°C</td><td>Gate, globe</td></tr>
+        <tr><td>Steam and boiler feedwater</td><td>Class 300–600</td><td>≤ 450°C</td><td>Globe, check</td></tr>
+        <tr><td>Flare and vent systems</td><td>Class 150–300</td><td>—</td><td>Ball (fire-safe)</td></tr>
+      </table>
+      <p>Pressure class selection follows the <strong>ASME B16.34</strong> pressure-temperature rating table: at higher temperatures the allowable working pressure of the same class drops, so always compare against the "allowable working pressure at design temperature" rather than the nameplate class alone.</p>
+
+      <h2>2. Body Material Selection</h2>
+      <h3>2.1 Material Comparison</h3>
+      <table>
+        <tr><th>Material</th><th>Applicable Temperature</th><th>Typical Service</th></tr>
+        <tr><td>WCB (carbon steel)</td><td>-29 to 425°C</td><td>General oil and steam lines</td></tr>
+        <tr><td>WC6 / WC9 (Cr-Mo steel)</td><td>-29 to 595°C</td><td>High-temperature steam, hot oil (atmospheric/vacuum side)</td></tr>
+        <tr><td>CF8 / CF8M (stainless steel)</td><td>-196 to 425°C</td><td>Sour and corrosive media; wet H2S service</td></tr>
+        <tr><td>Low-temp steel LCB (-46°C)</td><td>Low-temperature</td><td>LPG units, refrigerant systems</td></tr>
+      </table>
+      <h3>2.2 Key Notes</h3>
+      <ul>
+        <li>For <strong>H2S service</strong>, evaluate sulfide stress cracking resistance per <strong>NACE MR0175 / ISO 15156</strong></li>
+        <li>Seat surfaces for high temperature are recommended to use <strong>stellite overlay or solid hard-facing</strong></li>
+        <li>Stems should use 17-4PH or Inconel 718 corrosion-resistant high-strength alloys</li>
+        <li>Require <strong>impact test reports</strong> and <strong>high-temperature tensile</strong> data from the supplier</li>
+      </ul>
+
+      <h2>3. Governing Standard Reference</h2>
+      <table>
+        <tr><th>Item</th><th>International</th><th>Chinese Equivalent</th></tr>
+        <tr><td>Industrial valve design</td><td>API 6D / ASME B16.34</td><td>GB/T 12224</td></tr>
+        <tr><td>Gate valve</td><td>API 600 / API 603</td><td>GB/T 12234</td></tr>
+        <tr><td>Ball valve</td><td>API 608 / API 6D</td><td>GB/T 12237</td></tr>
+        <tr><td>Butterfly valve</td><td>API 609</td><td>GB/T 12238</td></tr>
+        <tr><td>Flange connection</td><td>ASME B16.5 / B16.47</td><td>GB/T 9113 / HG/T 20592</td></tr>
+        <tr><td>Pressure testing</td><td>API 598 / ISO 5208</td><td>GB/T 13927</td></tr>
+      </table>
+      <blockquote>
+        <p>Procurement advice: state clearly in the contract "<strong>designed to API 6D + tested to API 598</strong>" and arrange third-party witness (SGS/BV/TUV) of pressure and seat tests. Chinese equivalent standards are for reference only — avoid mixing them.</p>
+      </blockquote>
+
+      <h2>4. Zero-Leakage Sealing Levels</h2>
+      <ul>
+        <li>Soft-seated ball valves can reach <strong>ISO 5208 Rate A / zero leakage</strong> (Class VI)</li>
+        <li>Metal-seated valves are generally accepted at <strong>Rate B/C</strong>; confirm acceptable leakage with the project</li>
+        <li>For elevated vents and flare lines, prefer <strong>double-block-and-bleed (DBB) ball valves</strong></li>
+        <li>When fire safety applies, specify <strong>API 607 / ISO 10497</strong> fire-tested valve construction</li>
+      </ul>
+
+      <h2>5. Procurement Advice</h2>
+      <p>Vietnamese and Indonesian projects are strict about shipping documents (material certifications, pressure test reports, traceability certificates, often requiring notarized translation). Choose a Chinese supplier with <strong>complete third-party inspection experience and document delivery capability</strong>. Langtuo Valve maintains WC6/WC9 high-temperature and CF8M sour-service production lines, supports API 6D design and SGS third-party witnessed testing, and dispatches on FOB Shenzhen terms with export customs clearance support.</p>
       </div>
 
       <div class="post-cta">
-        <h3>正在筹备炼化项目采购？</h3>
-        <p>提供工况参数表，我们协助输出阀型清单与材质建议。</p>
-        <a href="contact.html" class="btn">联系我们 &#8594;</a>
+        <h3 data-i18n="post.ctaTitle">正在筹备炼化项目采购？</h3>
+        <p data-i18n="post.ctaText">提供工况参数表，我们协助输出阀型清单与材质建议。</p>
+        <a href="contact.html" class="btn" data-i18n="post.ctaBtn">联系我们 &#8594;</a>
       </div>
 
       <nav class="post-nav">
-        <a href="blog-02.html" class="next">&larr; 上一篇：球阀 vs 蝶阀</a>
-        <a href="blog-04.html" class="next">下一篇：RCEP关税优化策略 &#8594;</a>
+        <a href="blog-02.html" class="next" data-i18n="post.prev">&larr; 上一篇：球阀 vs 蝶阀</a>
+        <a href="blog-04.html" class="next" data-i18n="post.next">下一篇：RCEP关税优化策略 &#8594;</a>
       </nav>
     </div>
   </section>
@@ -304,7 +366,14 @@ var i18n = {
     'footer.c3':'选型须知','footer.c4':'联系我们','footer.resources':'资源','footer.blog':'技术博客',
     'footer.guide':'选型指南','footer.quote':'获取报价',
     'breadcrumb.home':'首页','breadcrumb.blog':'技术博客','breadcrumb.current':'本篇',
-    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例'
+    'blog.title':'技术博客','blog.subtitle':'面向东南亚市场的工业阀门采购指南、选型对比与应用案例',
+    'post.title':'越南/印尼炼化项目阀门选型：高压高温工况下的材料与标准选择',
+    'post.cat':'🛠 炼化项目 · 高压高温',
+    'post.ctaTitle':'正在筹备炼化项目采购？',
+    'post.ctaText':'提供工况参数表，我们协助输出阀型清单与材质建议。',
+    'post.ctaBtn':'联系我们 →',
+    'post.prev':'← 上一篇：球阀 vs 蝶阀',
+    'post.next':'下一篇：RCEP关税优化策略 →',
   },
   en: {
     'nav.home':'Home','nav.about':'About','nav.products':'Products','nav.selection':'Selection Guide',
@@ -314,11 +383,19 @@ var i18n = {
     'footer.c3':'Selection Guide','footer.c4':'Contact Us','footer.resources':'Resources','footer.blog':'Blog',
     'footer.guide':'Selection Guide','footer.quote':'Get Quote',
     'breadcrumb.home':'Home','breadcrumb.blog':'Blog','breadcrumb.current':'Current',
-    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia'
+    'blog.title':'Blog','blog.subtitle':'Industrial Valve Procurement Guides for Southeast Asia',
+    'post.title':'Valve Selection for Vietnam/Indonesia Refinery Projects: Materials & Standards for High-Pressure, High-Temperature Service',
+    'post.cat':'🛠 Refinery Projects · High Pressure & Temperature',
+    'post.ctaTitle':'Preparing a refinery project procurement?',
+    'post.ctaText':'Send us the service condition sheet and we will help produce a valve list and material recommendations.',
+    'post.ctaBtn':'Contact Us →',
+    'post.prev':'← Previous: Ball vs Butterfly Valve',
+    'post.next':'Next: RCEP Tariff Optimization →',
   }
 };
 function switchLang(lang) {
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.body.classList.toggle('lang-en', lang === 'en');
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
     btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);
