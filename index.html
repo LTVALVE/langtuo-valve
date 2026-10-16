@@ -2751,7 +2751,7 @@ function collectLightboxItems() {
   var imgs = document.querySelectorAll(selectors);
   for (var i = 0; i < imgs.length; i++) {
     var src = imgs[i].getAttribute('src') || '';
-    if (src && src.indexOf('images/') !== -1 && src.toLowerCase().indexOf('.jpg') !== -1) {
+    if (src && src.indexOf('images/') !== -1 && (src.toLowerCase().indexOf('.jpg') !== -1 || src.toLowerCase().indexOf('.png') !== -1)) {
       lightboxItems.push(imgs[i]);
     }
   }
