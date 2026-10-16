@@ -21,3 +21,6 @@ Allow: /
 Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /admin/
+Disallow: /langtuo-valve-website.html
+Disallow: /product-detail.html
+Disallow: /products_new.html

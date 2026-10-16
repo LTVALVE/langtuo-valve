@@ -1949,6 +1949,10 @@ textarea.form-input{resize:vertical;min-height:120px}
 .lightbox-zoom-toggle{width:38px;height:38px;font-size:15px;top:10px;left:10px}
 }
 </style>
+<style>
+.series-page-link{display:inline-flex;align-items:center;gap:6px;padding:10px 22px;font-size:.88rem;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:var(--radius);background:rgba(30,111,217,.08);text-decoration:none;transition:var(--transition)}
+.series-page-link:hover{background:var(--accent);color:#fff}
+</style>
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -2015,6 +2019,7 @@ var _hmt = _hmt || [];
       <div class="main-header">
         <h2 id="currentSeriesTitle"></h2>
         <p id="currentSeriesDesc"></p>
+        <div id="seriesPageLink" style="margin-top:14px"></div>
       </div>
       <div class="subcategory-tabs" id="subcategoryTabs" style="display:none"></div>
       <div class="product-grid-large" id="productGridLarge"></div>
@@ -2315,6 +2320,27 @@ function renderSeriesNav() {
   nav.innerHTML = html;
 }
 
+var seriesPages = {
+  '截止阀系列':'globe-valve.html',
+  '闸阀系列':'gate-valve.html',
+  '球阀系列':'ball-valve.html',
+  '蝶阀系列':'butterfly-valve.html',
+  '调节阀系列':'control-valve.html',
+  '角阀系列':'angle-valve.html',
+  '放料阀系列':'flush-bottom-valve.html',
+  '过滤器与止回阀系列':'strainer.html',
+  '疏水阀系列':'steam-trap.html',
+  'Globe Valve Series':'globe-valve.html',
+  'Gate Valve Series':'gate-valve.html',
+  'Ball Valve Series':'ball-valve.html',
+  'Butterfly Valve Series':'butterfly-valve.html',
+  'Control Valve Series':'control-valve.html',
+  'Angle Valve Series':'angle-valve.html',
+  'Discharge Valve Series':'flush-bottom-valve.html',
+  'Strainer & Check Valve Series':'strainer.html',
+  'Steam Trap Series':'steam-trap.html'
+};
+
 function showSeries(index) {
   currentSeriesIdx = index;
   currentSubcategoryIdx = null;
@@ -2322,6 +2348,13 @@ function showSeries(index) {
   var data = products[currentLang][index];
   document.getElementById('currentSeriesTitle').textContent = data.name;
   document.getElementById('currentSeriesDesc').textContent = data.desc;
+  var page = seriesPages[data.name];
+  var linkBox = document.getElementById('seriesPageLink');
+  if (page && linkBox) {
+    linkBox.innerHTML = '<a class="series-page-link" href="' + page + '">' + (currentLang === 'zh' ? '查看该系列详细产品页 →' : 'View Full Series Page →') + '</a>';
+  } else if (linkBox) {
+    linkBox.innerHTML = '';
+  }
   renderSubcategoryTabs(data);
   renderProductGrid(data);
 }
