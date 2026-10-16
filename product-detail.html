@@ -11,14 +11,14 @@
 <meta name="author" content="Shenzhen Langtuo Valve Co., Ltd">
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
-<link rel="canonical" href="https://site.langtuovalve.com/product-detail.html">
-<link rel="alternate" hreflang="en" href="https://site.langtuovalve.com/product-detail.html" />
-<link rel="alternate" hreflang="zh-CN" href="https://site.langtuovalve.com/product-detail.html" />
+<link rel="canonical" href="https://www.langtuovalve.com/product-detail.html">
+<link rel="alternate" hreflang="en" href="https://www.langtuovalve.com/product-detail.html" />
+<link rel="alternate" hreflang="zh-CN" href="https://www.langtuovalve.com/product-detail.html" />
 <meta property="og:site_name" content="Shenzhen Langtuo Valve Co., Ltd">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
-<meta property="og:url" content="https://site.langtuovalve.com/product-detail.html">
+<meta property="og:url" content="https://www.langtuovalve.com/product-detail.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@langtuovalve">
 <script type="application/ld+json">
@@ -30,8 +30,8 @@
   "@type": "Organization",
   "name": "Shenzhen Langtuo Valve Co., Ltd",
   "alternateName": "深圳市朗拓阀门有限公司",
-  "url": "https://site.langtuovalve.com",
-  "logo": "https://site.langtuovalve.com/images/factory_01.jpg",
+  "url": "https://www.langtuovalve.com",
+  "logo": "https://www.langtuovalve.com/images/factory_01.jpg",
   "description": "Professional industrial valve supply chain service provider for Southeast Asia and global markets.",
   "foundingDate": "2009",
   "areaServed": [
@@ -69,17 +69,17 @@
     ]
   },
   "sameAs": [
-    "https://site.langtuovalve.com"
+    "https://www.langtuovalve.com"
   ]
 },
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Langtuo Valve",
-  "url": "https://site.langtuovalve.com",
+  "url": "https://www.langtuovalve.com",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://site.langtuovalve.com/products.html?q={search_term_string}",
+    "target": "https://www.langtuovalve.com/products.html?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
@@ -646,7 +646,7 @@ var p=found.prod;
     if(oldLd)oldLd.remove();
     var sc=document.createElement('script');
     sc.type='application/ld+json';sc.id='product-jsonld';
-    var imgUrl=p.img?('https://site.langtuovalve.com/'+p.img):'https://site.langtuovalve.com/images/factory_01.jpg';
+    var imgUrl=p.img?('https://www.langtuovalve.com/'+p.img):'https://www.langtuovalve.com/images/factory_01.jpg';
     sc.textContent=JSON.stringify({
       "@context":"https://schema.org/",
       "@type":"Product",
@@ -654,9 +654,9 @@ var p=found.prod;
       "image":imgUrl,
       "description":p.desc||'',
       "brand":{"@type":"Brand","name":"Langtuo Valve"},
-      "manufacturer":{"@type":"Organization","name":"Shenzhen Langtuo Valve Co., Ltd","url":"https://site.langtuovalve.com"},
+      "manufacturer":{"@type":"Organization","name":"Shenzhen Langtuo Valve Co., Ltd","url":"https://www.langtuovalve.com"},
       "category":found.series.name+' - '+found.sub.name,
-      "offers":{"@type":"Offer","url":"https://site.langtuovalve.com/product-detail.html?product="+encodeURIComponent(p.name),"availability":"https://schema.org/InStock","priceCurrency":"USD","price":"0.00","priceValidUntil":""},
+      "offers":{"@type":"Offer","url":"https://www.langtuovalve.com/product-detail.html?product="+encodeURIComponent(p.name),"availability":"https://schema.org/InStock","priceCurrency":"USD","price":"0.00","priceValidUntil":""},
       "additionalProperty":(p.specs||'').split('\n').filter(function(l){return l&&l.indexOf(':')>0;}).map(function(l){var sp=l.split(/[:：]/,2);return {"@type":"PropertyValue","name":sp[0].trim(),"value":(sp[1]||'').trim()};}).slice(0,8)
     });
     document.head.appendChild(sc);
