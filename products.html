@@ -2629,7 +2629,7 @@ document.addEventListener('click', function(e) {
   }
 }, true);
 (function() {
-  var m = (location.search || '').match(/[?&]lang=(zh|en)/);
+  var m = (location.search || '').match(/[?&]lang=(zh|en|th)/);
   if (m && m[1] !== currentLang && typeof switchLang === 'function') { switchLang(m[1]); }
 })();
 
