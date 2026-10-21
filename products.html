@@ -2003,7 +2003,7 @@ var _hmt = _hmt || [];
 <!-- ===== Hero ===== -->
 <section style="background:linear-gradient(135deg,#f4f7fb 0%,#eef3f9 100%);border-bottom:1px solid #e5e9f0;padding:120px 0 48px;">
   <div class="container">
-    <div style="font-size:.85rem;color:#6b7a90;margin-bottom:14px;"><a href="index.html" style="color:#1e6fd9;text-decoration:none;">首页</a> › 产品中心</div>
+    <div style="font-size:.85rem;color:#6b7a90;margin-bottom:14px;"><a href="index.html" style="color:#1e6fd9;text-decoration:none;" data-i18n="nav.home">首页</a> › <span data-i18n="products.title">产品中心</span></div>
     <h1 data-i18n="products.heroTitle" style="font-size:2.2rem;color:#1f2a3d;margin:0 0 14px;font-weight:700;">工业阀门产品中心</h1>
     <p data-i18n="products.heroDesc" style="color:#4a5872;font-size:1rem;max-width:760px;line-height:1.8;margin:0;">朗拓阀门供应球阀、闸阀、截止阀、蝶阀、调节阀、止回阀、疏水阀等全系列工业阀门，材质覆盖 WCB 铸钢、304/316 不锈钢，压力等级 Class 150–2500、PN10–PN420，遵循 GB、ANSI、API、DIN、JIS 标准，广泛应用于石油、化工、电力、冶金、水处理与船舶行业，产品远销东南亚、中东、非洲及全球市场。</p>
   </div>
@@ -2382,6 +2382,135 @@ var products = {"zh":[{"name":"截止阀系列","svgId":null,"count":7,"subcateg
 
 var thSeriesNames = {0:'วาล์วโลก',1:'วาล์วเกท',2:'วาล์วบอล',3:'วาล์วผีเสื้อ',4:'วาล์วควบคุม',5:'วาล์วมุม',6:'วาล์วปล่อยก้นถัง',7:'วาล์วกรอง',8:'วาล์วกันย้อนกลับ',9:'กับดักไอน้ำ',10:'อุปกรณ์เสริมวาล์ว'};
 
+var thNameMap = {
+  'Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์',
+  'Stainless Steel Globe Valve': 'วาล์วโลกสแตนเลส',
+  'Flanged Globe Valve': 'วาล์วโลกหน้าแปลน',
+  'Threaded Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์แบบเกลียว',
+  'Manual Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์แบบมือหมุน',
+  'Extended Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์แบบขายาว',
+  'Y-Type Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์แบบวาย',
+  'Angle Bellows Globe Valve': 'วาล์วโลกซีลเบลโลว์แบบมุม',
+  'Flanged Gate Valve': 'วาล์วเกทหน้าแปลน',
+  'Electric Gate Valve': 'วาล์วเกทไฟฟ้า',
+  'Large Diameter Gate Valve': 'วาล์วเกทเส้นผ่านศูนย์กลางใหญ่',
+  'Bellows Gate Valve': 'วาล์วเกทซีลเบลโลว์',
+  'Knife Gate Valve': 'วาล์วเกทมีด',
+  'Flat Gate Valve': 'วาล์วเกทแบบจานแบน',
+  'Electric Flanged Gate Valve': 'วาล์วเกทหน้าแปลนไฟฟ้า',
+  'Electric Stainless Steel Gate Valve': 'วาล์วเกทไฟฟ้าสแตนเลส',
+  'Large Diameter Electric Gate Valve': 'วาล์วเกทไฟฟ้าเส้นผ่านศูนย์กลางใหญ่',
+  'Pneumatic Knife Gate Valve': 'วาล์วเกทมีดนิวเมติก',
+  'Manual Knife Gate Valve': 'วาล์วเกทมีดแบบมือหมุน',
+  'Pneumatic Flat Gate Valve': 'วาล์วเกทจานแบนนิวเมติก',
+  'Manual Ball Valve': 'วาล์วบอลแบบมือหมุน',
+  'Pneumatic Ball Valve': 'วาล์วบอลนิวเมติก',
+  '3-Way Ball Valve': 'วาล์วบอล 3 ทาง',
+  'Eccentric Semi-Ball Valve': 'วาล์วกึ่งบอลเยื้องศูนย์',
+  'Electric Ball Valve': 'วาล์วบอลไฟฟ้า',
+  'High Pressure Ball Valve': 'วาล์วบอลแรงดันสูง',
+  'Manual 2-Piece Threaded Ball Valve': 'วาล์วบอล 2 ชิ้นแบบเกลียว',
+  '3-Piece Quick-Install Ball Valve': 'วาล์วบอล 3 ชิ้นแบบติดตั้งเร็ว',
+  '3-Piece External Thread Weld Ball Valve': 'วาล์วบอล 3 ชิ้นแบบเชื่อมเกลียวภายนอก',
+  '3-Piece Extended Butt Weld Ball Valve': 'วาล์วบอล 3 ชิ้นแบบเชื่อมชนขายาว',
+  'Double Union Ball Valve': 'วาล์วบอลแบบยูเนียนคู่',
+  '3-Piece Stainless Steel Ball Valve': 'วาล์วบอลสแตนเลส 3 ชิ้น',
+  'Wafer Type Thin Ball Valve': 'วาล์วบอลบางแบบเวเฟอร์',
+  'Stainless Steel Sanitary 3-Piece Ball Valve': 'วาล์วบอลสุขอนามัยสแตนเลส 3 ชิ้น',
+  'Forged High-Pressure 2-Piece Hard-Sealed Ball Valve': 'วาล์วบอลตีขึ้นรูป 2 ชิ้นซีลแข็งแรงดันสูง',
+  '3-Piece Internal Thread Extended Stem Ball Valve': 'วาล์วบอล 3 ชิ้นเกลียวในก้านยาว',
+  'Manual Hard-Sealed Flanged Ball Valve': 'วาล์วบอลหน้าแปลนซีลแข็งแบบมือหมุน',
+  'Pneumatic Flanged High-Platform Ball Valve': 'วาล์วบอลหน้าแปลนแท่นสูงนิวเมติก',
+  'Pneumatic Threaded Ball Valve': 'วาล์วบอลเกลียวนิวเมติก',
+  'Pneumatic Plastic Ball Valve': 'วาล์วบอลพลาสติกนิวเมติก',
+  'Pneumatic PTFE-Lined Ball Valve': 'วาล์วบอลบุพีทีเอฟอีนิวเมติก',
+  'UPVC Pneumatic Double Union Ball Valve': 'วาล์วบอลยูเนียนคู่ยูพีวีซีนิวเมติก',
+  'Pneumatic Quick-Install Ball Valve with Positioner': 'วาล์วบอลติดตั้งเร็วพร้อมโพซิชันเนอร์นิวเมติก',
+  'Pneumatic Flanged Ball Valve': 'วาล์วบอลหน้าแปลนนิวเมติก',
+  'Pneumatic Flanged 3-Way Ball Valve': 'วาล์วบอล 3 ทางหน้าแปลนนิวเมติก',
+  'Pneumatic Clamp 3-Way Ball Valve': 'วาล์วบอล 3 ทางแบบยึดนิวเมติก',
+  'Electric Flanged 3-Way Ball Valve': 'วาล์วบอล 3 ทางหน้าแปลนไฟฟ้า',
+  'Manual Gear Eccentric Semi-Ball Valve': 'วาล์วกึ่งบอลเยื้องศูนย์แบบเกียร์มือ',
+  'Electric Threaded Ball Valve': 'วาล์วบอลเกลียวไฟฟ้า',
+  'Electric Sanitary Ball Valve': 'วาล์วบอลสุขอนามัยไฟฟ้า',
+  'Electric V-Port Ball Valve': 'วาล์วบอลพอร์ตตัววีไฟฟ้า',
+  'Electric Flanged Ball Valve': 'วาล์วบอลหน้าแปลนไฟฟ้า',
+  'High-Pressure Ball Valve': 'วาล์วบอลแรงดันสูง',
+  'Soft Sealed Butterfly Valve': 'วาล์วผีเสื้อซีลอ่อน',
+  'Gear-Operated Butterfly Valve': 'วาล์วผีเสื้อแบบเกียร์',
+  'Manual Butterfly Valve': 'วาล์วผีเสื้อแบบมือหมุน',
+  'Electric Butterfly Valve': 'วาล์วผีเสื้อไฟฟ้า',
+  'Metal Seated Butterfly Valve': 'วาล์วผีเสื้อซีลโลหะ',
+  'Triple-Offset Butterfly Valve': 'วาล์วผีเสื้อสามจุดเยื้องศูนย์',
+  'Dual Butterfly Valve': 'วาล์วผีเสื้อคู่',
+  'High-Performance Butterfly Valve': 'วาล์วผีเสื้อประสิทธิภาพสูง',
+  'UPVC Wafer Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์ยูพีวีซี',
+  'Wafer Manual Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์แบบมือหมุน',
+  'Pneumatic Soft-Sealed Wafer Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์ซีลอ่อนนิวเมติก',
+  'Pneumatic Soft-Sealed Flanged Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนซีลอ่อนนิวเมติก',
+  'Gear-Operated Wafer Manual Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์แบบเกียร์มือ',
+  'Gear-Operated Flanged Manual Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนแบบเกียร์มือ',
+  'Stainless Steel Sanitary Threaded Butterfly Valve': 'วาล์วผีเสื้อเกลียวสุขอนามัยสแตนเลส',
+  'Electric Soft-Sealed Wafer Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์ซีลอ่อนไฟฟ้า',
+  'Electric Soft-Sealed Wafer Butterfly Valve - 2': 'วาล์วผีเสื้อเวเฟอร์ซีลอ่อนไฟฟ้า - 2',
+  'Electric Soft-Sealed Flanged Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนซีลอ่อนไฟฟ้า',
+  'Electric Wafer Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์ไฟฟ้า',
+  'Electric Ventilation Butterfly Valve': 'วาล์วผีเสื้อระบายอากาศไฟฟ้า',
+  'Pneumatic Wafer Metal-Seated Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์ซีลโลหะนิวเมติก',
+  'Electric Metal-Seated Flanged Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนซีลโลหะไฟฟ้า',
+  'Pneumatic Flanged Metal-Seated Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนซีลโลหะนิวเมติก',
+  'Stainless Steel Wafer Butterfly Valve': 'วาล์วผีเสื้อเวเฟอร์สแตนเลส',
+  'Pneumatic Triple-Offset Flanged Butterfly Valve': 'วาล์วผีเสื้อหน้าแปลนสามจุดเยื้องศูนย์นิวเมติก',
+  'Pneumatic Dual Butterfly Valve Linkage': 'ชุดวาล์วผีเสื้อคู่เชื่อมโยงนิวเมติก',
+  'Pneumatic High-Performance Butterfly Valve': 'วาล์วผีเสื้อประสิทธิภาพสูงนิวเมติก',
+  'Sanitary Control Valve': 'วาล์วควบคุมเกรดสุขอนามัย',
+  'PTFE-Lined Control Valve': 'วาล์วควบคุมบุพีทีเอฟอี',
+  'Pneumatic Control Valve': 'วาล์วควบคุมนิวเมติก',
+  'Temperature Control Valve': 'วาล์วควบคุมอุณหภูมิ',
+  'Electric Control Valve': 'วาล์วควบคุมไฟฟ้า',
+  'Angle Control Valve': 'วาล์วควบคุมแบบมุม',
+  'High-Temperature High-Pressure Control Valve': 'วาล์วควบคุมอุณหภูมิสูงแรงดันสูง',
+  'Self-Acting Control Valve': 'วาล์วควบคุมแบบอาศัยแรงดันเอง',
+  'Pneumatic Sanitary Control Valve': 'วาล์วควบคุมสุขอนามัยนิวเมติก',
+  'Pneumatic PTFE-Lined Control Valve': 'วาล์วควบคุมบุพีทีเอฟอีนิวเมติก',
+  'Electric Temperature Control Valve': 'วาล์วควบคุมอุณหภูมิไฟฟ้า',
+  'Self-Operated Temperature Control Valve': 'วาล์วควบคุมอุณหภูมิแบบอาศัยแรงดันเอง',
+  'Pneumatic Angle-Type Control Valve': 'วาล์วควบคุมแบบมุมนิวเมติก',
+  'Pneumatic High-Temperature High-Pressure Control Valve': 'วาล์วควบคุมอุณหภูมิสูงแรงดันสูงนิวเมติก',
+  'Electric High-Temperature High-Pressure Control Valve': 'วาล์วควบคุมอุณหภูมิสูงแรงดันสูงไฟฟ้า',
+  'Self-Operated Pressure Control Valve': 'วาล์วควบคุมแรงดันแบบอาศัยแรงดันเอง',
+  'Threaded Angle Valve': 'วาล์วมุมแบบเกลียว',
+  'Flanged Angle Valve': 'วาล์วมุมหน้าแปลน',
+  '3-Way Angle Valve': 'วาล์วมุม 3 ทาง',
+  'Threaded Pneumatic Angle Seat Valve': 'วาล์วมุมซีทแบบเกลียวนิวเมติก',
+  'Flanged Pneumatic Angle Seat Valve': 'วาล์วมุมซีทหน้าแปลนนิวเมติก',
+  'Pneumatic Discharge Valve': 'วาล์วปล่อยก้นถังนิวเมติก',
+  'Standard Discharge Valve': 'วาล์วปล่อยก้นถังมาตรฐาน',
+  'Pneumatic Jacketed Thermal Discharge Valve': 'วาล์วปล่อยก้นถังมีแจ็กเก็ตความร้อนนิวเมติก',
+  'Bottom-Flush Discharge Valve': 'วาล์วปล่อยก้นถังแบบเปิดจากล่าง',
+  'Strainer': 'ตะแกรงกรอง',
+  'Y-Type Strainer': 'ตะแกรงกรองแบบวาย',
+  'Y-type Threaded Strainer': 'ตะแกรงกรองแบบวายเกลียว',
+  'Check Valve': 'วาล์วกันย้อนกลับ',
+  'Swing Check Valve': 'วาล์วกันย้อนกลับแบบสวิง',
+  'Bell Float Steam Trap': 'กับดักไอน้ำแบบทุ่นระฆัง',
+  'Inverted Bucket Steam Trap': 'กับดักไอน้ำแบบถังคว่ำ',
+  'Lever Float Steam Trap': 'กับดักไอน้ำแบบทุ่นคาน',
+  'Free-Floating Ball Steam Trap': 'กับดักไอน้ำแบบทุ่นลอยอิสระ',
+  'Thermodynamic Steam Trap': 'กับดักไอน้ำแบบเทอร์โมไดนามิก',
+  'Flanged Lever Float Steam Trap': 'กับดักไอน้ำทุ่นคานหน้าแปลน',
+  'Flanged Lever Float Steam Trap-2': 'กับดักไอน้ำทุ่นคานหน้าแปลน-2',
+  'Flanged Free-Floating Ball Steam Trap': 'กับดักไอน้ำทุ่นลอยอิสระหน้าแปลน',
+  'Disc-Type Thermodynamic Steam Trap': 'กับดักไอน้ำเทอร์โมไดนามิกแบบดิสก์',
+  'Solenoid Valve': 'โซลินอยด์วาล์ว',
+  'Limit Switch': 'ลิมิตสวิตช์',
+  'Air Source Treatment Unit': 'หน่วยปรับสภาพลม',
+  'Valve Positioner': 'โพซิชันเนอร์วาล์ว',
+  'Smart Valve Positioner': 'โพซิชันเนอร์วาล์วอัจฉริยะ'
+};
+
+function thName(n) { return (currentLang === 'th' && thNameMap[n]) ? thNameMap[n] : n; }
+
 /* ===== Language Switching ===== */
 function switchLang(lang) {
   currentLang = lang;
@@ -2493,7 +2622,7 @@ function renderSubcategoryTabs(series) {
   tabs.style.display = 'flex';
   var html = '<span class="tab ' + (currentSubcategoryIdx === null ? 'active' : '') + '" onclick="filterSubcategory(null)">' + (currentLang === 'zh' ? '全部' : (currentLang === 'th' ? 'ทั้งหมด' : 'All')) + '</span>';
   for (var i = 0; i < series.subcategories.length; i++) {
-    html += '<span class="tab ' + (currentSubcategoryIdx === i ? 'active' : '') + '" onclick="filterSubcategory(' + i + ')">' + series.subcategories[i].name + '</span>';
+    html += '<span class="tab ' + (currentSubcategoryIdx === i ? 'active' : '') + '" onclick="filterSubcategory(' + i + ')">' + thName(series.subcategories[i].name) + '</span>';
   }
   tabs.innerHTML = html;
 }
@@ -2526,21 +2655,21 @@ function renderProductGrid(series) {
     }
   }
   if (items.length === 0) {
-    grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px 0">' + (currentLang === 'zh' ? '暂无产品' : 'No products') + '</p>';
+    grid.innerHTML = '<p style="color:var(--text-muted);text-align:center;padding:40px 0">' + (currentLang === 'zh' ? '暂无产品' : (currentLang === 'th' ? 'ไม่มีสินค้า' : 'No products')) + '</p>';
     return;
   }
   var html = '';
   for (var i = 0; i < items.length; i++) {
 var p = items[i];
-    var model = (p.model || '').trim() || (p.specs || '').split(/\s+/)[0] || (currentLang === 'zh' ? '查看规格' : 'View Specs');
-    var brief = p.desc ? (p.desc.length > 52 ? p.desc.slice(0, 52) + '\u2026' : p.desc) : (currentLang === 'zh' ? '点击查看产品详情' : 'Click to view product details');
+    var model = (p.model || '').trim() || (p.specs || '').split(/\s+/)[0] || (currentLang === 'zh' ? '查看规格' : (currentLang === 'th' ? 'ดูสเปก' : 'View Specs'));
+    var brief = p.desc ? (p.desc.length > 52 ? p.desc.slice(0, 52) + '\u2026' : p.desc) : (currentLang === 'zh' ? '点击查看产品详情' : (currentLang === 'th' ? 'ดูรายละเอียดสินค้า' : 'Click to view product details'));
     html += '<a class="product-large-card" href="product-detail.html?product=' + encodeURIComponent(p.name) + '&lang=' + currentLang + '">' +
       '<div class="product-large-img">' +
         (p.img ? '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" onerror="handleImgError(this)">' : '<svg class="placeholder-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="80" width="120" height="50" rx="4" fill="rgba(30,111,217,.06)" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".3"/><circle cx="100" cy="50" r="12" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".4" fill="none"/></svg>') +
       '</div>' +
       '<div class="product-large-body">' +
-        '<h4>' + p.name + '</h4>' +
-        '<span class="sub-tag">' + p._subName + '</span>' +
+        '<h4>' + thName(p.name) + '</h4>' +
+        '<span class="sub-tag">' + thName(p._subName) + '</span>' +
         '<span class="model-tag">' + model + '</span>' +
         '<p class="product-large-brief">' + brief + '</p>' +
       '</div>' +
