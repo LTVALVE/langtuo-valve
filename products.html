@@ -2663,7 +2663,9 @@ function renderProductGrid(series) {
 var p = items[i];
     var model = (p.model || '').trim() || (p.specs || '').split(/\s+/)[0] || (currentLang === 'zh' ? '查看规格' : (currentLang === 'th' ? 'ดูสเปก' : 'View Specs'));
     var brief = p.desc ? (p.desc.length > 52 ? p.desc.slice(0, 52) + '\u2026' : p.desc) : (currentLang === 'zh' ? '点击查看产品详情' : (currentLang === 'th' ? 'ดูรายละเอียดสินค้า' : 'Click to view product details'));
-    html += '<a class="product-large-card" href="product-detail.html?product=' + encodeURIComponent(p.name) + '&lang=' + currentLang + '">' +
+    var seriesHref = seriesPages[series.name];
+    var productHref = seriesHref || ('product-detail.html?product=' + encodeURIComponent(p.name) + '&lang=' + currentLang);
+    html += '<a class="product-large-card" href="' + productHref + '">' +
       '<div class="product-large-img">' +
         (p.img ? '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy" onerror="handleImgError(this)">' : '<svg class="placeholder-svg" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="80" width="120" height="50" rx="4" fill="rgba(30,111,217,.06)" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".3"/><circle cx="100" cy="50" r="12" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".4" fill="none"/></svg>') +
       '</div>' +
