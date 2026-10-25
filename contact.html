@@ -1812,26 +1812,29 @@ var _hmt = _hmt || [];
         </div>
       </div>
       <div class="contact-form">
-        <form id="contactForm" onsubmit="return submitForm(event)">
+        <form id="contactForm" action="https://formsubmit.co/LTVALVE1@126.com" method="POST" onsubmit="return validateForm(event)">
+          <input type="hidden" name="_subject" value="New Inquiry from langtuovalve.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-group">
             <label data-i18n="form.name">您的姓名 *</label>
-            <input type="text" class="form-input" id="formName" required>
+            <input type="text" class="form-input" id="formName" name="name" required>
           </div>
           <div class="form-group">
             <label data-i18n="form.email">电子邮箱 *</label>
-            <input type="email" class="form-input" id="formEmail" required>
+            <input type="email" class="form-input" id="formEmail" name="email" required>
           </div>
           <div class="form-group">
             <label data-i18n="form.company">公司名称</label>
-            <input type="text" class="form-input" id="formCompany">
+            <input type="text" class="form-input" id="formCompany" name="company">
           </div>
           <div class="form-group">
             <label data-i18n="form.product">需求产品</label>
-            <input type="text" class="form-input" id="formProduct">
+            <input type="text" class="form-input" id="formProduct" name="product">
           </div>
           <div class="form-group">
             <label data-i18n="form.message">需求描述 *</label>
-            <textarea class="form-input" id="formMessage" required></textarea>
+            <textarea class="form-input" id="formMessage" name="message" required></textarea>
           </div>
           <button type="submit" class="form-submit" data-i18n="form.submit">发送询盘</button>
         </form>
@@ -2074,9 +2077,8 @@ function toggleMenu() {
   nav.classList.toggle('open');
 }
 
-/* ===== Contact Form (mailto, no server) ===== */
-function submitForm(e) {
-  e.preventDefault();
+/* ===== Contact Form (FormSubmit relay, no server needed) ===== */
+function validateForm(e) {
   var name = document.getElementById('formName').value.trim();
   var email = document.getElementById('formEmail').value.trim();
   var company = document.getElementById('formCompany').value.trim();
@@ -2088,16 +2090,8 @@ function submitForm(e) {
   if (!email || email.indexOf('@') === -1) { alertInline('formEmail', t['form.errEmail']); return false; }
   if (!message) { alertInline('formMessage', t['form.errMsg']); return false; }
 
-  var subject = (currentLang === 'zh' ? '询盘 - ' : 'Inquiry - ') + name;
-  var body = (currentLang === 'zh' ? '姓名' : 'Name') + ': ' + name + '\n' +
-             (currentLang === 'zh' ? '邮箱' : 'Email') + ': ' + email + '\n' +
-             (currentLang === 'zh' ? '公司' : 'Company') + ': ' + (company || '-') + '\n' +
-             (currentLang === 'zh' ? '需求产品' : 'Product') + ': ' + (product || '-') + '\n' +
-             (currentLang === 'zh' ? '需求描述' : 'Details') + ': ' + message;
-
-  var mailto = 'mailto:LTVALVE1@126.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  window.location.href = mailto;
-  return false;
+  // FormSubmit relay: fields are posted to formsubmit.co which forwards to LTVALVE1@126.com
+  return true;
 }
 
 function alertInline(fieldId, msg) {
