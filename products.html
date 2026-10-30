@@ -489,6 +489,30 @@ var i18n = {
   }
 };
 
+/* ===== Language switcher ===== */
+function switchLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : (lang === 'th' ? 'th' : 'en');
+  var btns = document.querySelectorAll('.lang-btn');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].classList.toggle('active', btns[i].id === 'btn-' + lang);
+  }
+  var elements = document.querySelectorAll('[data-i18n]');
+  for (var i = 0; i < elements.length; i++) {
+    var el = elements[i];
+    var key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key] !== undefined) {
+      el.innerHTML = i18n[lang][key];
+    }
+  }
+  var q = document.getElementById('ltvqTxt');
+  if (q) { q.textContent = lang === 'zh' ? '获取报价' : (lang === 'th' ? 'ขอใบเสนอราคา' : 'Request a Quote'); }
+  var qs = document.getElementById('ltvqSub');
+  if (qs) { qs.textContent = lang === 'zh' ? '联系我们' : (lang === 'th' ? 'หน้าติดต่อ' : 'Contact Page'); }
+  if (typeof initProducts === 'function') { initProducts(); }
+  else if (typeof handleRoute === 'function') { handleRoute(); }
+}
+
 /* ===== Product SVGs (inline data) ===== */
 var productSVGs = {
   'LT-GV': '<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="40" y="65" width="120" height="30" rx="3" fill="rgba(30,111,217,.06)" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".4"/><path d="M55 65 L55 50 L145 50 L145 65" stroke="#1e6fd9" stroke-width="2" stroke-opacity=".6" fill="none"/><path d="M100 50 L100 35" stroke="#1e6fd9" stroke-width="2" stroke-opacity=".5"/><circle cx="100" cy="28" r="10" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".6" fill="none"/><path d="M92 28 L108 28 M100 20 L100 36" stroke="#1e6fd9" stroke-width="1" stroke-opacity=".4"/><rect x="85" y="65" width="30" height="30" rx="2" fill="rgba(30,111,217,.08)" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".5"/><path d="M85 80 L70 95 M115 80 L130 95" stroke="#1e6fd9" stroke-width="1.5" stroke-opacity=".3"/><text x="100" y="115" text-anchor="middle" fill="#5b6b82" font-size="7" font-family="monospace">LT-GV Globe Valve</text></svg>',
@@ -707,6 +731,7 @@ function alertInline(fieldId, msg) {
 /* ===== Init ===== */
 /* Product page: init flat layout */
 initProducts();
+switchLang(currentLang);
 
 /* Close mobile menu on nav click */
 var navLinks = document.querySelectorAll('.nav a');
