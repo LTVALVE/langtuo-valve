@@ -14,6 +14,7 @@
 <meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://www.langtuovalve.com/control-valve.html">
 <link rel="alternate" hreflang="en" href="https://www.langtuovalve.com/control-valve.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.langtuovalve.com/control-valve.html" />
 <link rel="alternate" hreflang="th" href="https://www.langtuovalve.com/control-valve-th.html" />
 <meta property="og:site_name" content="Shenzhen Langtuo Valve Co., Ltd">
 <meta property="og:type" content="website">
@@ -1836,6 +1837,7 @@ var _hmt = _hmt || [];
 </script>
 </head>
 <body>
+<!--email_off-->
 
 <!-- ===== Header ===== -->
 <header class="header" id="header">
@@ -2071,7 +2073,19 @@ var _hmt = _hmt || [];
 </footer>
 
 <script>
-var currentLang = 'zh';
+/* ===== Language resolution: URL param > saved choice > browser > English ===== */
+var currentLang = (function () {
+  var m = (location.search || '').match(/[?&]lang=(zh|en|th)/);
+  if (m) { return m[1]; }
+  try {
+    var s = localStorage.getItem('ltv_lang');
+    if (s === 'zh' || s === 'en' || s === 'th') { return s; }
+  } catch (e) {}
+  var n = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (n.indexOf('zh') === 0) { return 'zh'; }
+  if (n.indexOf('th') === 0) { return 'th'; }
+  return 'en';
+})();
 
 var i18n = {
   zh: {
@@ -2299,6 +2313,7 @@ var i18n = {
 /* ===== Language Switching ===== */
 function switchLang(lang) {
   currentLang = lang;
+  try { localStorage.setItem('ltv_lang', lang); } catch (e) {}
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
@@ -2420,7 +2435,7 @@ document.addEventListener('keydown', function(e) {
 </script>
 <!-- ===== CRO: floating quote CTA (injected) ===== -->
 <div id="ltvqWrap" class="ltvq-wrap" aria-label="Quote">
-  <a class="ltvq-btn" id="ltvqBtn" href="mailto:LTVALVE1@126.com?subject=Quote%20Request%20-%20langtuovalve.com">
+  <a class="ltvq-btn" id="ltvqBtn" href="contact.html">
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
     <span class="ltvq-txt" id="ltvqTxt">Request a Quote</span>
   </a>
@@ -2459,5 +2474,6 @@ document.addEventListener('keydown', function(e) {
 })();
 </script>
 
+<!--email_on-->
 </body>
 </html>

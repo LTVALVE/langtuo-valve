@@ -14,6 +14,7 @@
 <meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://www.langtuovalve.com/contact.html">
 <link rel="alternate" hreflang="en" href="https://www.langtuovalve.com/contact.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.langtuovalve.com/contact.html" />
 <meta property="og:site_name" content="Shenzhen Langtuo Valve Co., Ltd">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
@@ -1719,6 +1720,7 @@ var _hmt = _hmt || [];
 <link rel="preconnect" href="https://www.googletagmanager.com">
 </head>
 <body>
+<!--email_off-->
 
 <!-- ===== Header ===== -->
 <header class="header" id="header">
@@ -1795,7 +1797,7 @@ var _hmt = _hmt || [];
             </svg>
             <div>
               <h4 data-i18n="contact.email">电子邮箱</h4>
-              <p>LTVALVE1@126.com</p>
+              <p><a href="mailto:LTVALVE1@126.com" style="color:inherit;text-decoration:underline;">LTVALVE1@126.com</a></p>
             </div>
           </div>
           <div class="contact-item">
@@ -1834,6 +1836,8 @@ var _hmt = _hmt || [];
           <input type="hidden" name="_subject" value="New Inquiry from langtuovalve.com">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://www.langtuovalve.com/thank-you.html">
+          <input type="hidden" name="_source" value="Contact page form">
           <div class="form-group">
             <label data-i18n="form.name">您的姓名 *</label>
             <input type="text" class="form-input" id="formName" name="name" required>
@@ -1856,6 +1860,7 @@ var _hmt = _hmt || [];
           </div>
           <button type="submit" class="form-submit" data-i18n="form.submit">发送询盘</button>
         </form>
+        <p data-i18n="form.orContact" style="margin-top:14px;font-size:14px;line-height:1.7;color:#4a5568;">邮件没收到回复？直接 WhatsApp：<a href="https://wa.me/8613434774164" target="_blank" rel="noopener" style="color:#1e6fd9;font-weight:600;text-decoration:underline;">+86 134 3477 4164</a></p>
       </div>
     </div>
   </div>
@@ -1900,7 +1905,19 @@ var _hmt = _hmt || [];
 </footer>
 
 <script>
-var currentLang = 'zh';
+/* ===== Language resolution: URL param > saved choice > browser > English ===== */
+var currentLang = (function () {
+  var m = (location.search || '').match(/[?&]lang=(zh|en|th)/);
+  if (m) { return m[1]; }
+  try {
+    var s = localStorage.getItem('ltv_lang');
+    if (s === 'zh' || s === 'en' || s === 'th') { return s; }
+  } catch (e) {}
+  var n = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+  if (n.indexOf('zh') === 0) { return 'zh'; }
+  if (n.indexOf('th') === 0) { return 'th'; }
+  return 'en';
+})();
 
 var i18n = {
   zh: {
@@ -1967,6 +1984,7 @@ var i18n = {
     'form.product': '需求产品',
     'form.message': '需求描述 *',
     'form.submit': '发送询盘',
+    'form.orContact': '邮件没收到回复？直接 WhatsApp：<a href="https://wa.me/8613434774164" target="_blank" rel="noopener" style="color:#1e6fd9;font-weight:600;text-decoration:underline;">+86 134 3477 4164</a>',
     'footer.desc': '深圳市朗拓阀门有限公司 — 面向海外工业客户供应工业阀门。',
     'footer.products': '产品',
     'footer.p1': '调节阀',
@@ -2051,6 +2069,7 @@ var i18n = {
     'form.product': 'Product Required',
     'form.message': 'Inquiry Details *',
     'form.submit': 'Send Inquiry',
+    'form.orContact': 'No reply by email? Message us on WhatsApp: <a href="https://wa.me/8613434774164" target="_blank" rel="noopener" style="color:#1e6fd9;font-weight:600;text-decoration:underline;">+86 134 3477 4164</a>',
     'footer.desc': 'Shenzhen Langtuo Valve Co., Ltd — Industrial valve supply for overseas industrial customers.',
     'footer.products': 'Products',
     'footer.p1': 'Control Valves',
@@ -2135,6 +2154,7 @@ var i18n = {
     'form.product': "ผลิตภัณฑ์ที่ต้องการ",
     'form.message': "รายละเอียดการสอบถาม *",
     'form.submit': "ส่งข้อสอบถาม",
+    'form.orContact': 'ไม่ได้รับการตอบกลับทางอีเมล? ทัก WhatsApp: <a href="https://wa.me/8613434774164" target="_blank" rel="noopener" style="color:#1e6fd9;font-weight:600;text-decoration:underline;">+86 134 3477 4164</a>',
     'footer.desc': "บริษัท เสิ่นเจิ้น หลางทัว วาล์ว จำกัด — ผู้จำหน่ายวาล์วอุตสาหกรรมให้ลูกค้าต่างประเทศ",
     'footer.products': "ผลิตภัณฑ์",
     'footer.p1': "วาล์วควบคุม",
@@ -2160,6 +2180,7 @@ var i18n = {
 /* ===== Language Switching ===== */
 function switchLang(lang) {
   currentLang = lang;
+  try { localStorage.setItem('ltv_lang', lang); } catch (e) {}
   document.documentElement.lang = lang === 'zh' ? 'zh-CN' : (lang === 'th' ? 'th' : 'en');
   var btns = document.querySelectorAll('.lang-btn');
   for (var i = 0; i < btns.length; i++) {
@@ -2250,7 +2271,7 @@ if (t && t !== document) {
 </script>
 <!-- ===== CRO: floating quote CTA (injected) ===== -->
 <div id="ltvqWrap" class="ltvq-wrap" aria-label="Quote">
-  <a class="ltvq-btn" id="ltvqBtn" href="mailto:LTVALVE1@126.com?subject=Quote%20Request%20-%20langtuovalve.com">
+  <a class="ltvq-btn" id="ltvqBtn" href="contact.html">
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
     <span class="ltvq-txt" id="ltvqTxt">Request a Quote</span>
   </a>
@@ -2289,5 +2310,6 @@ if (t && t !== document) {
 })();
 </script>
 
+<!--email_on-->
 </body>
 </html>
